@@ -19,7 +19,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ github.ref }}
-          check-name: 'buildAndTest'
+          check-name: "buildAndTest"
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
 
@@ -29,10 +29,10 @@ jobs:
         uses: rohith/publish-nuget@v2
         with:
           # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Gotrue/Gotrue.csproj
+          PROJECT_FILE_PATH: Functions/Functions.csproj
 
           # NuGet package id, used for version detection & defaults to project name
-          PACKAGE_NAME: supabase/gotrue
+          PACKAGE_NAME: supabase/functions
 
           # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
           # VERSION_FILE_PATH: Directory.Build.props
