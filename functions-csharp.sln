@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{228693BB-A395-4123-93E8-5299FF875615}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functions", "Functions\Functions.csproj", "{889543F7-1F08-4032-A3D7-F7425ED03D9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionsTests", "FunctionsTests\FunctionsTests.csproj", "{B427628C-D057-45E9-982F-552748894A94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{889543F7-1F08-4032-A3D7-F7425ED03D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889543F7-1F08-4032-A3D7-F7425ED03D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889543F7-1F08-4032-A3D7-F7425ED03D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889543F7-1F08-4032-A3D7-F7425ED03D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B427628C-D057-45E9-982F-552748894A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B427628C-D057-45E9-982F-552748894A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B427628C-D057-45E9-982F-552748894A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B427628C-D057-45E9-982F-552748894A94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CB8EBAC-5D93-461A-8D2D-B83A69E49B4B}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.VersionControlPolicy = $2
+		version = 2.4.0
+	EndGlobalSection
+EndGlobal
