@@ -66,6 +66,7 @@ namespace Supabase.Functions
             }
 
             options.Headers["Authorization"] = $"Bearer {token}";
+            options.Headers["X-Client-Info"] = Util.GetAssemblyVersion();
 
             var builder = new UriBuilder(url);
             var query = HttpUtility.ParseQueryString(builder.Query);
@@ -99,6 +100,18 @@ namespace Supabase.Functions
                 }
 
                 return response;
+            }
+        }
+
+        public class RequestException : Exception
+        {
+            public HttpResponseMessage Response { get; private set; }
+            public ErrorResponse Error { get; private set; }
+
+            public RequestException(HttpResponseMessage response, ErrorResponse error) : base(error.Message)
+            {
+                Response = response;
+                Error = error;
             }
         }
 

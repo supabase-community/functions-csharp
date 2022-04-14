@@ -17,7 +17,7 @@ namespace FunctionsTests
         public async Task Invokes()
         {
             var token = Environment.GetEnvironmentVariable("TOKEN");
-            var endpoint = Environment.GetEnvironmentVariable("ENDPOINT");
+            var endpoint = Environment.GetEnvironmentVariable("FUNCTION_ENDPOINT");
 
             var result = await Invoke(endpoint, token, new InvokeFunctionOptions
             {
