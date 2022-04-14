@@ -80,51 +80,51 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.RawInvoke
   nameWithType: Client.RawInvoke
-- uid: Supabase.Functions.RequestException
-  name: RequestException
-  href: api/Supabase.Functions.RequestException.html
-  commentId: T:Supabase.Functions.RequestException
-  fullName: Supabase.Functions.RequestException
-  nameWithType: RequestException
-- uid: Supabase.Functions.RequestException.#ctor(HttpResponseMessage,Supabase.Functions.Responses.ErrorResponse)
+- uid: Supabase.Functions.Client.RequestException
+  name: Client.RequestException
+  href: api/Supabase.Functions.Client.RequestException.html
+  commentId: T:Supabase.Functions.Client.RequestException
+  fullName: Supabase.Functions.Client.RequestException
+  nameWithType: Client.RequestException
+- uid: Supabase.Functions.Client.RequestException.#ctor(HttpResponseMessage,Supabase.Functions.Responses.ErrorResponse)
   name: RequestException(HttpResponseMessage, ErrorResponse)
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException__ctor_HttpResponseMessage_Supabase_Functions_Responses_ErrorResponse_
-  commentId: M:Supabase.Functions.RequestException.#ctor(HttpResponseMessage,Supabase.Functions.Responses.ErrorResponse)
-  fullName: Supabase.Functions.RequestException.RequestException(HttpResponseMessage, Supabase.Functions.Responses.ErrorResponse)
-  nameWithType: RequestException.RequestException(HttpResponseMessage, ErrorResponse)
-- uid: Supabase.Functions.RequestException.#ctor*
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException__ctor_HttpResponseMessage_Supabase_Functions_Responses_ErrorResponse_
+  commentId: M:Supabase.Functions.Client.RequestException.#ctor(HttpResponseMessage,Supabase.Functions.Responses.ErrorResponse)
+  fullName: Supabase.Functions.Client.RequestException.RequestException(HttpResponseMessage, Supabase.Functions.Responses.ErrorResponse)
+  nameWithType: Client.RequestException.RequestException(HttpResponseMessage, ErrorResponse)
+- uid: Supabase.Functions.Client.RequestException.#ctor*
   name: RequestException
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException__ctor_
-  commentId: Overload:Supabase.Functions.RequestException.#ctor
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException__ctor_
+  commentId: Overload:Supabase.Functions.Client.RequestException.#ctor
   isSpec: "True"
-  fullName: Supabase.Functions.RequestException.RequestException
-  nameWithType: RequestException.RequestException
-- uid: Supabase.Functions.RequestException.Error
+  fullName: Supabase.Functions.Client.RequestException.RequestException
+  nameWithType: Client.RequestException.RequestException
+- uid: Supabase.Functions.Client.RequestException.Error
   name: Error
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException_Error
-  commentId: P:Supabase.Functions.RequestException.Error
-  fullName: Supabase.Functions.RequestException.Error
-  nameWithType: RequestException.Error
-- uid: Supabase.Functions.RequestException.Error*
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException_Error
+  commentId: P:Supabase.Functions.Client.RequestException.Error
+  fullName: Supabase.Functions.Client.RequestException.Error
+  nameWithType: Client.RequestException.Error
+- uid: Supabase.Functions.Client.RequestException.Error*
   name: Error
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException_Error_
-  commentId: Overload:Supabase.Functions.RequestException.Error
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException_Error_
+  commentId: Overload:Supabase.Functions.Client.RequestException.Error
   isSpec: "True"
-  fullName: Supabase.Functions.RequestException.Error
-  nameWithType: RequestException.Error
-- uid: Supabase.Functions.RequestException.Response
+  fullName: Supabase.Functions.Client.RequestException.Error
+  nameWithType: Client.RequestException.Error
+- uid: Supabase.Functions.Client.RequestException.Response
   name: Response
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException_Response
-  commentId: P:Supabase.Functions.RequestException.Response
-  fullName: Supabase.Functions.RequestException.Response
-  nameWithType: RequestException.Response
-- uid: Supabase.Functions.RequestException.Response*
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException_Response
+  commentId: P:Supabase.Functions.Client.RequestException.Response
+  fullName: Supabase.Functions.Client.RequestException.Response
+  nameWithType: Client.RequestException.Response
+- uid: Supabase.Functions.Client.RequestException.Response*
   name: Response
-  href: api/Supabase.Functions.RequestException.html#Supabase_Functions_RequestException_Response_
-  commentId: Overload:Supabase.Functions.RequestException.Response
+  href: api/Supabase.Functions.Client.RequestException.html#Supabase_Functions_Client_RequestException_Response_
+  commentId: Overload:Supabase.Functions.Client.RequestException.Response
   isSpec: "True"
-  fullName: Supabase.Functions.RequestException.Response
-  nameWithType: RequestException.Response
+  fullName: Supabase.Functions.Client.RequestException.Response
+  nameWithType: Client.RequestException.Response
 - uid: Supabase.Functions.Responses
   name: Supabase.Functions.Responses
   href: api/Supabase.Functions.Responses.html
