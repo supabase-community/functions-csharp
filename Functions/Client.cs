@@ -20,9 +20,16 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public static async Task<HttpContent> RawInvoke(string url, string token, InvokeFunctionOptions options = null) => (await HandleRequest(url, token, options)).Content;
+        public static async Task<HttpContent> RawInvoke(string url, string token = null, InvokeFunctionOptions options = null) => (await HandleRequest(url, token, options)).Content;
 
-        public static async Task<string> Invoke(string url, string token, InvokeFunctionOptions options = null)
+        /// <summary>
+        /// Invokes a function and returns the Text content of the response.
+        /// </summary>
+        /// <param name="url">Url of the function to invoke</param>
+        /// <param name="token">Anon Key.</param>
+        /// <param name="options">Options</param>
+        /// <returns></returns>
+        public static async Task<string> Invoke(string url, string token = null, InvokeFunctionOptions options = null)
         {
             var response = await HandleRequest(url, token, options);
 
@@ -37,7 +44,7 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public static async Task<T> Invoke<T>(string url, string token, InvokeFunctionOptions options = null)
+        public static async Task<T> Invoke<T>(string url, string token = null, InvokeFunctionOptions options = null)
         {
             var response = await HandleRequest(url, token, options);
 
@@ -54,14 +61,18 @@ namespace Supabase.Functions
         /// <param name="options"></param>
         /// <returns></returns>
         /// <exception cref="RequestException"></exception>
-        private static async Task<HttpResponseMessage> HandleRequest(string url, string token, InvokeFunctionOptions options)
+        private static async Task<HttpResponseMessage> HandleRequest(string url, string token = null, InvokeFunctionOptions options)
         {
             if (options == null)
             {
                 options = new InvokeFunctionOptions();
             }
 
-            options.Headers["Authorization"] = $"Bearer {token}";
+            if (!string.IsNullOrEmpty(token))
+            {
+                options.Headers["Authorization"] = $"Bearer {token}";
+            }
+
             options.Headers["X-Client-Info"] = Util.GetAssemblyVersion();
 
             var builder = new UriBuilder(url);
@@ -114,7 +125,7 @@ namespace Supabase.Functions
         /// <summary>
         /// Options that can be supplied to a function invocation.
         /// 
-        /// Note: If Headers.Authorization is set, it will later be overriden by the token supplied in the method call.
+        /// Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call.
         /// </summary>
         public class InvokeFunctionOptions
         {
