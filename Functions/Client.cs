@@ -61,7 +61,7 @@ namespace Supabase.Functions
         /// <param name="options"></param>
         /// <returns></returns>
         /// <exception cref="RequestException"></exception>
-        private static async Task<HttpResponseMessage> HandleRequest(string url, string token = null, InvokeFunctionOptions options)
+        private static async Task<HttpResponseMessage> HandleRequest(string url, string token = null, InvokeFunctionOptions options = null)
         {
             if (options == null)
             {
