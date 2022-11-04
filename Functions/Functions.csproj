@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <PackOnBuild>true</PackOnBuild>
-        <PackageId>functions-csharp</PackageId>
-        <Authors>Joseph Schultz &lt;joseph@acupofjose.com&gt;</Authors>
-        <Copyright>MIT</Copyright>
-        <NeutralLanguage>en</NeutralLanguage>
-        <Owners>Joseph Schultz &lt;joseph@acupofjose.com&gt;</Owners>
-        <Summary>A C# client for Supabase functions</Summary>
-        <Title>Function</Title>
-        <Description>A C# client for Supabase functions</Description>
-        <RootNamespace>Supabase.Functions</RootNamespace>
-        <PackageIconUrl>https://avatars.githubusercontent.com/u/54469796?s=200&amp;v=4</PackageIconUrl>
-        <PackageLicenseUrl>https://github.com/supabase-community/functions-csharp/blob/master/LICENSE</PackageLicenseUrl>
-        <PackageProjectUrl>https://github.com/supabase-community/functions-csharp</PackageProjectUrl>
-        <PackageTags>supabase, functions</PackageTags>
-        <PackageVersion>1.0.1</PackageVersion>
-        <ReleaseVersion>1.0.1</ReleaseVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Version)' == '' ">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackOnBuild>true</PackOnBuild>
+		<PackageId>functions-csharp</PackageId>
+		<Authors>Joseph Schultz &lt;joseph@acupofjose.com&gt;</Authors>
+		<Copyright>MIT</Copyright>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Owners>Joseph Schultz &lt;joseph@acupofjose.com&gt;</Owners>
+		<Summary>A C# client for Supabase functions</Summary>
+		<Title>Function</Title>
+		<Description>A C# client for Supabase functions</Description>
+		<RootNamespace>Supabase.Functions</RootNamespace>
+		<PackageIconUrl>https://avatars.githubusercontent.com/u/54469796?s=200&amp;v=4</PackageIconUrl>
+		<PackageLicenseUrl>https://github.com/supabase-community/functions-csharp/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/supabase-community/functions-csharp</PackageProjectUrl>
+		<PackageTags>supabase, functions</PackageTags>
+		<PackageVersion>1.1.0</PackageVersion>
+		<ReleaseVersion>1.1.0</ReleaseVersion>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<LangVersion>8.0</LangVersion>
+		<WarningsAsErrors>CS8600;CS8602;CS8603</WarningsAsErrors>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Version)' == '' ">
 		<VersionPrefix Condition=" '$(VersionPrefix)' == '' ">1.0.1</VersionPrefix>
 		<VersionSuffix Condition=" '$(VersionSuffix)' == '' ">
 		</VersionSuffix>
 		<Version Condition=" '$(VersionSuffix)' != '' ">$(VersionPrefix)-$(VersionSuffix)</Version>
 		<Version Condition=" '$(Version)' == '' ">$(VersionPrefix)</Version>
 	</PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-      <LangVersion>8.0</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-      <LangVersion>8.0</LangVersion>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    </ItemGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<LangVersion>8.0</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<LangVersion>8.0</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Supabase.Functions.Interfaces;
 using Supabase.Functions.Responses;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web;
 
 namespace Supabase.Functions
 {
-    public class Client
+    public class Client : IFunctionsClient
     {
         private static readonly HttpClient client = new HttpClient();
 
@@ -20,7 +21,7 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public static async Task<HttpContent> RawInvoke(string url, string token = null, InvokeFunctionOptions options = null) => (await HandleRequest(url, token, options)).Content;
+        public async Task<HttpContent> RawInvoke(string url, string? token = null, InvokeFunctionOptions? options = null) => (await HandleRequest(url, token, options)).Content;
 
         /// <summary>
         /// Invokes a function and returns the Text content of the response.
@@ -29,7 +30,7 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public static async Task<string> Invoke(string url, string token = null, InvokeFunctionOptions options = null)
+        public async Task<string> Invoke(string url, string? token = null, InvokeFunctionOptions? options = null)
         {
             var response = await HandleRequest(url, token, options);
 
@@ -44,7 +45,7 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public static async Task<T> Invoke<T>(string url, string token = null, InvokeFunctionOptions options = null)
+        public async Task<T?> Invoke<T>(string url, string? token = null, InvokeFunctionOptions? options = null) where T : class
         {
             var response = await HandleRequest(url, token, options);
 
@@ -61,7 +62,7 @@ namespace Supabase.Functions
         /// <param name="options"></param>
         /// <returns></returns>
         /// <exception cref="RequestException"></exception>
-        private static async Task<HttpResponseMessage> HandleRequest(string url, string token = null, InvokeFunctionOptions options = null)
+        private async Task<HttpResponseMessage> HandleRequest(string url, string? token = null, InvokeFunctionOptions? options = null)
         {
             if (options == null)
             {
