@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Client
+    <title>Interface IFunctionsClient
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Client
+    <meta name="title" content="Interface IFunctionsClient
    ">
     <meta name="generator" content="docfx 2.56.7.0">
     
@@ -68,45 +68,35 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Supabase.Functions.Client">
+            <article class="content wrap" id="_content" data-uid="Supabase.Functions.Interfaces.IFunctionsClient">
   
   
-  <h1 id="Supabase_Functions_Client" data-uid="Supabase.Functions.Client" class="text-break">Class Client
+  <h1 id="Supabase_Functions_Interfaces_IFunctionsClient" data-uid="Supabase.Functions.Interfaces.IFunctionsClient" class="text-break">Interface IFunctionsClient
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Client</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Supabase.Functions.Interfaces.IFunctionsClient.html">IFunctionsClient</a></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Supabase.Functions.html">Supabase.Functions</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Supabase.Functions.Interfaces.html">Supabase.Functions.Interfaces</a></h6>
   <h6><strong>Assembly</strong>: Functions.dll</h6>
-  <h5 id="Supabase_Functions_Client_syntax">Syntax</h5>
+  <h5 id="Supabase_Functions_Interfaces_IFunctionsClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Client : object, IFunctionsClient</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IFunctionsClient</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Client_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Client.Invoke(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Client.cs/#L33">View Source</a>
+    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Interfaces/IFunctionsClient.cs/#L8">View Source</a>
   </span>
-  <a id="Supabase_Functions_Client_Invoke_" data-uid="Supabase.Functions.Client.Invoke*"></a>
-  <h4 id="Supabase_Functions_Client_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Client.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">Invoke(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
-  <div class="markdown level1 summary"><p>Invokes a function and returns the Text content of the response.</p>
-</div>
+  <a id="Supabase_Functions_Interfaces_IFunctionsClient_Invoke_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.Invoke*"></a>
+  <h4 id="Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">Invoke(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; Invoke(string url, string? token = null, Client.InvokeFunctionOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;string&gt; Invoke(string url, string? token = null, Client.InvokeFunctionOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,20 +111,17 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">url</span></td>
-        <td><p>Url of the function to invoke</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">token</span></td>
-        <td><p>Anon Key.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Supabase.Functions.Client.InvokeFunctionOptions.html">Client.InvokeFunctionOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td><p>Options</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -155,19 +142,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Client_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Client.Invoke%60%601(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Interfaces_IFunctionsClient_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Interfaces.IFunctionsClient.Invoke%60%601(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Client.cs/#L48">View Source</a>
+    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Interfaces/IFunctionsClient.cs/#L9">View Source</a>
   </span>
-  <a id="Supabase_Functions_Client_Invoke_" data-uid="Supabase.Functions.Client.Invoke*"></a>
-  <h4 id="Supabase_Functions_Client_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Client.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">Invoke&lt;T&gt;(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
-  <div class="markdown level1 summary"><p>Invokes a function and returns a JSON Deserialized object according to the supplied generic Type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code></p>
-</div>
+  <a id="Supabase_Functions_Interfaces_IFunctionsClient_Invoke_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.Invoke*"></a>
+  <h4 id="Supabase_Functions_Interfaces_IFunctionsClient_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">Invoke&lt;T&gt;(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;T&gt; Invoke&lt;T&gt;(string url, string? token = null, Client.InvokeFunctionOptions options = null)
+    <pre><code class="lang-csharp hljs">Task&lt;T&gt; Invoke&lt;T&gt;(string url, string? token = null, Client.InvokeFunctionOptions options = null)
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -183,20 +169,17 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">url</span></td>
-        <td><p>Url of function to invoke</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">token</span></td>
-        <td><p>Anon Key.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Supabase.Functions.Client.InvokeFunctionOptions.html">Client.InvokeFunctionOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td><p>Options</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -232,19 +215,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Client_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Client.RawInvoke(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_.md&amp;value=---%0Auid%3A%20Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String%2CSystem.Nullable%7BSystem.String%7D%2CSupabase.Functions.Client.InvokeFunctionOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Client.cs/#L24">View Source</a>
+    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Interfaces/IFunctionsClient.cs/#L10">View Source</a>
   </span>
-  <a id="Supabase_Functions_Client_RawInvoke_" data-uid="Supabase.Functions.Client.RawInvoke*"></a>
-  <h4 id="Supabase_Functions_Client_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Client.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">RawInvoke(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
-  <div class="markdown level1 summary"><p>Returns an <see cref="!:HttpContent"></see> response, allowing for coersion into Streams, Strings, and byte[]</p>
-</div>
+  <a id="Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke*"></a>
+  <h4 id="Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_" data-uid="Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)">RawInvoke(String, Nullable&lt;String&gt;, Client.InvokeFunctionOptions)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;HttpContent&gt; RawInvoke(string url, string? token = null, Client.InvokeFunctionOptions options = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;HttpContent&gt; RawInvoke(string url, string? token = null, Client.InvokeFunctionOptions options = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -259,20 +241,17 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">url</span></td>
-        <td><p>Url of function to invoke</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">token</span></td>
-        <td><p>Anon Key.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="Supabase.Functions.Client.InvokeFunctionOptions.html">Client.InvokeFunctionOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td><p>Options</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -291,10 +270,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Supabase.Functions.Interfaces.IFunctionsClient.html">IFunctionsClient</a>
-  </div>
 </article>
           </div>
           
@@ -303,10 +278,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Client.md&amp;value=---%0Auid%3A%20Supabase.Functions.Client%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/supabase-community/functions-csharp/new/release/1.1.0/apiSpec/new?filename=Supabase_Functions_Interfaces_IFunctionsClient.md&amp;value=---%0Auid%3A%20Supabase.Functions.Interfaces.IFunctionsClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Client.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/supabase-community/functions-csharp/blob/release/1.1.0/Functions/Interfaces/IFunctionsClient.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
