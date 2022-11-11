@@ -13,6 +13,32 @@ references:
   commentId: T:Supabase.Functions.Client
   fullName: Supabase.Functions.Client
   nameWithType: Client
+- uid: Supabase.Functions.Client.#ctor(System.String)
+  name: Client(String)
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_System_String_
+  commentId: M:Supabase.Functions.Client.#ctor(System.String)
+  fullName: Supabase.Functions.Client.Client(System.String)
+  nameWithType: Client.Client(String)
+- uid: Supabase.Functions.Client.#ctor*
+  name: Client
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_
+  commentId: Overload:Supabase.Functions.Client.#ctor
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.Client
+  nameWithType: Client.Client
+- uid: Supabase.Functions.Client.GetHeaders
+  name: GetHeaders
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_GetHeaders
+  commentId: P:Supabase.Functions.Client.GetHeaders
+  fullName: Supabase.Functions.Client.GetHeaders
+  nameWithType: Client.GetHeaders
+- uid: Supabase.Functions.Client.GetHeaders*
+  name: GetHeaders
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_GetHeaders_
+  commentId: Overload:Supabase.Functions.Client.GetHeaders
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.GetHeaders
+  nameWithType: Client.GetHeaders
 - uid: Supabase.Functions.Client.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
   name: Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
@@ -143,6 +169,19 @@ references:
   commentId: T:Supabase.Functions.Interfaces.IFunctionsClient
   fullName: Supabase.Functions.Interfaces.IFunctionsClient
   nameWithType: IFunctionsClient
+- uid: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
+  name: GetHeaders
+  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_GetHeaders
+  commentId: P:Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
+  fullName: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
+  nameWithType: IFunctionsClient.GetHeaders
+- uid: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders*
+  name: GetHeaders
+  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_GetHeaders_
+  commentId: Overload:Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
+  isSpec: "True"
+  fullName: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
+  nameWithType: IFunctionsClient.GetHeaders
 - uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
   name: Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
   href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
