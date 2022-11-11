@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 1.2.0 - 2022-11-10
+
+- [MINOR] `Client` now initializes with a `baseUrl` and method calls arguments are only the `functionName`.
+- Included `GetHeaders` property.
+
 ## 1.1.0 - 2022-11-04
 
 - `Client` is no longer a Singleton class, it should be initialized using a default constructor.
