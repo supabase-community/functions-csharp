@@ -10,14 +10,24 @@ namespace FunctionsTests
     [TestClass]
     public class ClientTests
     {
+        Client client;
+        string token;
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            var endpoint = Environment.GetEnvironmentVariable("FUNCTION_ENDPOINT");
+
+            token = Environment.GetEnvironmentVariable("TOKEN");
+            client = new Client(endpoint);
+        }
+
         [TestMethod("Invokes a function.")]
         public async Task Invokes()
         {
-            var token = Environment.GetEnvironmentVariable("TOKEN");
-            var endpoint = Environment.GetEnvironmentVariable("FUNCTION_ENDPOINT");
-            var client = new Client();
+            var function = "hello";
 
-            var result = await client.Invoke(endpoint, token, new InvokeFunctionOptions
+            var result = await client.Invoke(function, token, new InvokeFunctionOptions
             {
                 Body = new Dictionary<string, object>
                 {
@@ -28,7 +38,7 @@ namespace FunctionsTests
             Assert.IsTrue(result.Contains("supabase"));
 
 
-            var result2 = await client.Invoke<Dictionary<string, string>>(endpoint, token, new InvokeFunctionOptions
+            var result2 = await client.Invoke<Dictionary<string, string>>(function, token, new InvokeFunctionOptions
             {
                 Body = new Dictionary<string, object>
                 {
@@ -41,7 +51,7 @@ namespace FunctionsTests
             Assert.IsTrue(result2["message"].Contains("functions"));
 
 
-            var result3 = await client.RawInvoke(endpoint, token, new InvokeFunctionOptions
+            var result3 = await client.RawInvoke(function, token, new InvokeFunctionOptions
             {
                 Body = new Dictionary<string, object>
                 {
