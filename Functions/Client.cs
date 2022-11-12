@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Supabase.Functions.Extensions;
+using Supabase.Core;
+using Supabase.Core.Extensions;
 using Supabase.Functions.Interfaces;
 using Supabase.Functions.Responses;
 using System;
@@ -14,11 +15,16 @@ using System.Web;
 namespace Supabase.Functions
 {
 
-    public class Client : IFunctionsClient
+    public partial class Client : IFunctionsClient
     {
         private static readonly HttpClient client = new HttpClient();
         private string baseUrl;
 
+        /// <summary>
+        /// Function that can be set to return dynamic headers.
+        /// 
+        /// Headers specified in the method parameters will ALWAYS take precendece over headers returned by this function.
+        /// </summary>
         public Func<Dictionary<string, string>>? GetHeaders { get; set; }
 
         public Client(string baseUrl)
@@ -98,7 +104,7 @@ namespace Supabase.Functions
                 options.Headers["Authorization"] = $"Bearer {token}";
             }
 
-            options.Headers["X-Client-Info"] = Util.GetAssemblyVersion();
+            options.Headers["X-Client-Info"] = Util.GetAssemblyVersion(typeof(Client));
 
             var builder = new UriBuilder(url);
             var query = HttpUtility.ParseQueryString(builder.Query);
@@ -145,26 +151,6 @@ namespace Supabase.Functions
                 Response = response;
                 Error = error;
             }
-        }
-
-        /// <summary>
-        /// Options that can be supplied to a function invocation.
-        /// 
-        /// Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call.
-        /// </summary>
-        public class InvokeFunctionOptions
-        {
-            /// <summary>
-            /// Headers to be included on the request.
-            /// </summary>
-            public Dictionary<string, string> Headers { get; set; } = new Dictionary<string, string>();
-
-
-            /// <summary>
-            /// Body of the Request
-            /// </summary>
-            [JsonProperty("body")]
-            public Dictionary<string, object> Body { get; set; } = new Dictionary<string, object>();
         }
     }
 }
