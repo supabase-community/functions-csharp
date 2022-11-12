@@ -1,5 +1,9 @@
 ﻿# Changelog
 
+## 1.2.1 - 11-12-2022
+
+- Use `supabase-core` and implement `IGettableHeaders` on `Client`
+
 ## 1.2.0 - 2022-11-10
 
 - [MINOR] `Client` now initializes with a `baseUrl` and method calls arguments are only the `functionName`.
