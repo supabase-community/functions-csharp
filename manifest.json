@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.Client.InvokeFunctionOptions.html",
-          "hash": "m5ZfHzG6xCn7y8FOC5grBg=="
+          "hash": "w+M3ToJ0MaJx59JpkZLUjA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.Client.RequestException.html",
-          "hash": "69gRPc3K+yNX4SB8lcPFwA=="
+          "hash": "j0uRimJ+iuqV+hcYXQss8A=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.Client.html",
-          "hash": "7wl51sNQOn+NIHZp5dsnnw=="
+          "hash": "902qpd9c17gyQGVRFlRibg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.Interfaces.IFunctionsClient.html",
-          "hash": "nG0sukf0QICMKlLoIR/CUg=="
+          "hash": "4kV92eX200SULcalLGgNYg=="
         }
       },
       "is_incremental": false,
@@ -101,23 +101,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Supabase.Functions.Util.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Supabase.Functions.Util.html",
-          "hash": "sGKYC2+4B7TuoYEh2uQ+kg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Supabase.Functions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.html",
-          "hash": "6dstyeqtxCjlKk1y7cWgzA=="
+          "hash": "E9cweRiat/XWW8s1IEWvpg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "yV6xCv86ayBSxaz0TW5ASA=="
+          "hash": "atLXwAMumJfK5Fv7km0MQA=="
         }
       },
       "is_incremental": false,
@@ -192,7 +180,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 9,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -169,19 +169,6 @@ references:
   commentId: T:Supabase.Functions.Interfaces.IFunctionsClient
   fullName: Supabase.Functions.Interfaces.IFunctionsClient
   nameWithType: IFunctionsClient
-- uid: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
-  name: GetHeaders
-  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_GetHeaders
-  commentId: P:Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
-  fullName: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
-  nameWithType: IFunctionsClient.GetHeaders
-- uid: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders*
-  name: GetHeaders
-  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_GetHeaders_
-  commentId: Overload:Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
-  isSpec: "True"
-  fullName: Supabase.Functions.Interfaces.IFunctionsClient.GetHeaders
-  nameWithType: IFunctionsClient.GetHeaders
 - uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
   name: Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
   href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
@@ -280,22 +267,3 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Responses.ErrorResponse.Message
   nameWithType: ErrorResponse.Message
-- uid: Supabase.Functions.Util
-  name: Util
-  href: api/Supabase.Functions.Util.html
-  commentId: T:Supabase.Functions.Util
-  fullName: Supabase.Functions.Util
-  nameWithType: Util
-- uid: Supabase.Functions.Util.GetAssemblyVersion
-  name: GetAssemblyVersion()
-  href: api/Supabase.Functions.Util.html#Supabase_Functions_Util_GetAssemblyVersion
-  commentId: M:Supabase.Functions.Util.GetAssemblyVersion
-  fullName: Supabase.Functions.Util.GetAssemblyVersion()
-  nameWithType: Util.GetAssemblyVersion()
-- uid: Supabase.Functions.Util.GetAssemblyVersion*
-  name: GetAssemblyVersion
-  href: api/Supabase.Functions.Util.html#Supabase_Functions_Util_GetAssemblyVersion_
-  commentId: Overload:Supabase.Functions.Util.GetAssemblyVersion
-  isSpec: "True"
-  fullName: Supabase.Functions.Util.GetAssemblyVersion
-  nameWithType: Util.GetAssemblyVersion
