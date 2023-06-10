@@ -10,26 +10,32 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Supabase.Functions.Exceptions;
 
 [assembly: InternalsVisibleTo("FunctionsTests")]
+
 namespace Supabase.Functions
 {
-
+    /// <inheritdoc />
     public partial class Client : IFunctionsClient
     {
-        private static readonly HttpClient client = new HttpClient();
-        private string baseUrl;
+        private static readonly HttpClient HttpClient = new HttpClient();
+        private readonly string _baseUrl;
 
         /// <summary>
         /// Function that can be set to return dynamic headers.
         /// 
-        /// Headers specified in the method parameters will ALWAYS take precendece over headers returned by this function.
+        /// Headers specified in the method parameters will ALWAYS take precedence over headers returned by this function.
         /// </summary>
         public Func<Dictionary<string, string>>? GetHeaders { get; set; }
 
+        /// <summary>
+        /// Initializes a functions client
+        /// </summary>
+        /// <param name="baseUrl"></param>
         public Client(string baseUrl)
         {
-            this.baseUrl = baseUrl;
+            _baseUrl = baseUrl;
         }
 
         /// <summary>
@@ -39,9 +45,10 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<HttpContent> RawInvoke(string functionName, string? token = null, InvokeFunctionOptions? options = null)
+        public async Task<HttpContent> RawInvoke(string functionName, string? token = null,
+            InvokeFunctionOptions? options = null)
         {
-            var url = $"{baseUrl}/{functionName}";
+            var url = $"{_baseUrl}/{functionName}";
 
             return (await HandleRequest(url, token, options)).Content;
         }
@@ -53,9 +60,10 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<string> Invoke(string functionName, string? token = null, InvokeFunctionOptions? options = null)
+        public async Task<string> Invoke(string functionName, string? token = null,
+            InvokeFunctionOptions? options = null)
         {
-            var url = $"{baseUrl}/{functionName}";
+            var url = $"{_baseUrl}/{functionName}";
             var response = await HandleRequest(url, token, options);
 
             return await response.Content.ReadAsStringAsync();
@@ -65,13 +73,14 @@ namespace Supabase.Functions
         /// Invokes a function and returns a JSON Deserialized object according to the supplied generic Type <typeparamref name="T"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="functionsName">Function Name, will be appended to BaseUrl</param>
+        /// <param name="functionName">Function Name, will be appended to BaseUrl</param>
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<T?> Invoke<T>(string functionName, string? token = null, InvokeFunctionOptions? options = null) where T : class
+        public async Task<T?> Invoke<T>(string functionName, string? token = null,
+            InvokeFunctionOptions? options = null) where T : class
         {
-            var url = $"{baseUrl}/{functionName}";
+            var url = $"{_baseUrl}/{functionName}";
             var response = await HandleRequest(url, token, options);
 
             var content = await response.Content.ReadAsStringAsync();
@@ -86,13 +95,11 @@ namespace Supabase.Functions
         /// <param name="token"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        /// <exception cref="RequestException"></exception>
-        internal async Task<HttpResponseMessage> HandleRequest(string url, string? token = null, InvokeFunctionOptions? options = null)
+        /// <exception cref="FunctionsException"></exception>
+        private async Task<HttpResponseMessage> HandleRequest(string url, string? token = null,
+            InvokeFunctionOptions? options = null)
         {
-            if (options == null)
-            {
-                options = new InvokeFunctionOptions();
-            }
+            options ??= new InvokeFunctionOptions();
 
             if (GetHeaders != null)
             {
@@ -111,46 +118,29 @@ namespace Supabase.Functions
 
             builder.Query = query.ToString();
 
-            using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, builder.Uri))
+            using var requestMessage = new HttpRequestMessage(HttpMethod.Post, builder.Uri);
+            requestMessage.Content = new StringContent(JsonConvert.SerializeObject(options.Body), Encoding.UTF8,
+                "application/json");
+
+            foreach (var kvp in options.Headers)
             {
-                requestMessage.Content = new StringContent(JsonConvert.SerializeObject(options.Body), Encoding.UTF8, "application/json");
+                requestMessage.Headers.TryAddWithoutValidation(kvp.Key, kvp.Value);
+            }
 
-                if (options.Headers != null)
-                {
-                    foreach (var kvp in options.Headers)
-                    {
-                        requestMessage.Headers.TryAddWithoutValidation(kvp.Key, kvp.Value);
-                    }
-                }
+            var response = await HttpClient.SendAsync(requestMessage);
 
-                var response = await client.SendAsync(requestMessage);
-
-                if (!response.IsSuccessStatusCode || response.Headers.Contains("x-relay-error"))
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-
-                    var obj = new ErrorResponse
-                    {
-                        Content = content,
-                        Message = content
-                    };
-                    throw new RequestException(response, obj);
-                }
-
+            if (response.IsSuccessStatusCode && !response.Headers.Contains("x-relay-error"))
                 return response;
-            }
-        }
 
-        public class RequestException : Exception
-        {
-            public HttpResponseMessage Response { get; private set; }
-            public ErrorResponse Error { get; private set; }
-
-            public RequestException(HttpResponseMessage response, ErrorResponse error) : base(error.Message)
+            var content = await response.Content.ReadAsStringAsync();
+            var exception = new FunctionsException(content)
             {
-                Response = response;
-                Error = error;
-            }
+                Content = content,
+                Response = response,
+                StatusCode = (int)response.StatusCode
+            };
+            exception.AddReason();
+            throw exception;
         }
     }
 }

@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 1.3.0 - 06-10-2023
+
+- Rename assembly to `Supabase.Functions`
+- Uses `FunctionsException` instead of `RequestException`
+
 ## 1.2.1 - 11-12-2022
 
 - Use `supabase-core` and implement `IGettableHeaders` on `Client`
