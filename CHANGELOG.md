@@ -1,5 +1,9 @@
 ﻿# Changelog
 
+## 1.3.1 - 06-10-2023
+
+- Updates usage of `Supabase.Core` assembly.
+
 ## 1.3.0 - 06-10-2023
 
 - Rename assembly to `Supabase.Functions`
