@@ -18,6 +18,7 @@
 		<PackageTags>supabase, functions</PackageTags>
 		<PackageVersion>1.2.1</PackageVersion>
 		<ReleaseVersion>1.2.1</ReleaseVersion>
+		<AssemblyName>Supabase.Functions</AssemblyName>
 	</PropertyGroup>
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
