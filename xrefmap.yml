@@ -14,18 +14,24 @@ references:
   fullName: Supabase.Functions.Client
   nameWithType: Client
 - uid: Supabase.Functions.Client.#ctor(System.String)
-  name: Client(String)
+  name: Client(string)
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_System_String_
   commentId: M:Supabase.Functions.Client.#ctor(System.String)
-  fullName: Supabase.Functions.Client.Client(System.String)
-  nameWithType: Client.Client(String)
+  name.vb: New(String)
+  fullName: Supabase.Functions.Client.Client(string)
+  fullName.vb: Supabase.Functions.Client.New(String)
+  nameWithType: Client.Client(string)
+  nameWithType.vb: Client.New(String)
 - uid: Supabase.Functions.Client.#ctor*
   name: Client
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_
   commentId: Overload:Supabase.Functions.Client.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: Supabase.Functions.Client.Client
+  fullName.vb: Supabase.Functions.Client.New
   nameWithType: Client.Client
+  nameWithType.vb: Client.New
 - uid: Supabase.Functions.Client.GetHeaders
   name: GetHeaders
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_GetHeaders
@@ -39,15 +45,15 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.GetHeaders
   nameWithType: Client.GetHeaders
-- uid: Supabase.Functions.Client.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Client.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: Invoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Client.Invoke(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Client.Invoke(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: Client.Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: Client.Invoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Client.Invoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: Invoke(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Client.Invoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: Invoke(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Client.Invoke(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Client.Invoke(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: Client.Invoke(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: Client.Invoke(String, String, Client.InvokeFunctionOptions)
 - uid: Supabase.Functions.Client.Invoke*
   name: Invoke
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke_
@@ -55,15 +61,6 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.Invoke
   nameWithType: Client.Invoke
-- uid: Supabase.Functions.Client.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: Invoke<T>(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Client.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: Invoke(Of T)(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Client.Invoke<T>(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Client.Invoke(Of T)(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: Client.Invoke<T>(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: Client.Invoke(Of T)(String, Nullable(Of String), Client.InvokeFunctionOptions)
 - uid: Supabase.Functions.Client.InvokeFunctionOptions
   name: Client.InvokeFunctionOptions
   href: api/Supabase.Functions.Client.InvokeFunctionOptions.html
@@ -96,15 +93,24 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.InvokeFunctionOptions.Headers
   nameWithType: Client.InvokeFunctionOptions.Headers
-- uid: Supabase.Functions.Client.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: RawInvoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Client.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: RawInvoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Client.RawInvoke(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Client.RawInvoke(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: Client.RawInvoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: Client.RawInvoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Client.Invoke``1(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: Invoke<T>(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke__1_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Client.Invoke``1(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: Invoke(Of T)(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Client.Invoke<T>(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Client.Invoke(Of T)(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: Client.Invoke<T>(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: Client.Invoke(Of T)(String, String, Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Client.RawInvoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: RawInvoke(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_RawInvoke_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Client.RawInvoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: RawInvoke(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Client.RawInvoke(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Client.RawInvoke(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: Client.RawInvoke(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: Client.RawInvoke(String, String, Client.InvokeFunctionOptions)
 - uid: Supabase.Functions.Client.RawInvoke*
   name: RawInvoke
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_RawInvoke_
@@ -167,31 +173,34 @@ references:
   commentId: T:Supabase.Functions.Exceptions.FunctionsException
   fullName: Supabase.Functions.Exceptions.FunctionsException
   nameWithType: FunctionsException
-- uid: Supabase.Functions.Exceptions.FunctionsException.#ctor(System.Nullable{System.String})
-  name: FunctionsException(Nullable<String>)
-  href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException__ctor_System_Nullable_System_String__
-  commentId: M:Supabase.Functions.Exceptions.FunctionsException.#ctor(System.Nullable{System.String})
-  name.vb: FunctionsException(Nullable(Of String))
-  fullName: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(System.Nullable<System.String>)
-  fullName.vb: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(System.Nullable(Of System.String))
-  nameWithType: FunctionsException.FunctionsException(Nullable<String>)
-  nameWithType.vb: FunctionsException.FunctionsException(Nullable(Of String))
-- uid: Supabase.Functions.Exceptions.FunctionsException.#ctor(System.Nullable{System.String},System.Nullable{Exception})
-  name: FunctionsException(Nullable<String>, Nullable<Exception>)
-  href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException__ctor_System_Nullable_System_String__System_Nullable_Exception__
-  commentId: M:Supabase.Functions.Exceptions.FunctionsException.#ctor(System.Nullable{System.String},System.Nullable{Exception})
-  name.vb: FunctionsException(Nullable(Of String), Nullable(Of Exception))
-  fullName: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(System.Nullable<System.String>, System.Nullable<Exception>)
-  fullName.vb: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(System.Nullable(Of System.String), System.Nullable(Of Exception))
-  nameWithType: FunctionsException.FunctionsException(Nullable<String>, Nullable<Exception>)
-  nameWithType.vb: FunctionsException.FunctionsException(Nullable(Of String), Nullable(Of Exception))
+- uid: Supabase.Functions.Exceptions.FunctionsException.#ctor(System.String)
+  name: FunctionsException(string?)
+  href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException__ctor_System_String_
+  commentId: M:Supabase.Functions.Exceptions.FunctionsException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(string?)
+  fullName.vb: Supabase.Functions.Exceptions.FunctionsException.New(String)
+  nameWithType: FunctionsException.FunctionsException(string?)
+  nameWithType.vb: FunctionsException.New(String)
+- uid: Supabase.Functions.Exceptions.FunctionsException.#ctor(System.String,System.Exception)
+  name: FunctionsException(string?, Exception?)
+  href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException__ctor_System_String_System_Exception_
+  commentId: M:Supabase.Functions.Exceptions.FunctionsException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: Supabase.Functions.Exceptions.FunctionsException.FunctionsException(string?, System.Exception?)
+  fullName.vb: Supabase.Functions.Exceptions.FunctionsException.New(String, System.Exception)
+  nameWithType: FunctionsException.FunctionsException(string?, Exception?)
+  nameWithType.vb: FunctionsException.New(String, Exception)
 - uid: Supabase.Functions.Exceptions.FunctionsException.#ctor*
   name: FunctionsException
   href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException__ctor_
   commentId: Overload:Supabase.Functions.Exceptions.FunctionsException.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: Supabase.Functions.Exceptions.FunctionsException.FunctionsException
+  fullName.vb: Supabase.Functions.Exceptions.FunctionsException.New
   nameWithType: FunctionsException.FunctionsException
+  nameWithType.vb: FunctionsException.New
 - uid: Supabase.Functions.Exceptions.FunctionsException.AddReason
   name: AddReason()
   href: api/Supabase.Functions.Exceptions.FunctionsException.html#Supabase_Functions_Exceptions_FunctionsException_AddReason
@@ -269,15 +278,15 @@ references:
   commentId: T:Supabase.Functions.Interfaces.IFunctionsClient
   fullName: Supabase.Functions.Interfaces.IFunctionsClient
   nameWithType: IFunctionsClient
-- uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: Invoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: IFunctionsClient.Invoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: IFunctionsClient.Invoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: Invoke(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.Invoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: Invoke(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: IFunctionsClient.Invoke(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: IFunctionsClient.Invoke(String, String, Client.InvokeFunctionOptions)
 - uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke*
   name: Invoke
   href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke_
@@ -285,24 +294,24 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Interfaces.IFunctionsClient.Invoke
   nameWithType: IFunctionsClient.Invoke
-- uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: Invoke<T>(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke__1_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.Invoke``1(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: Invoke(Of T)(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Interfaces.IFunctionsClient.Invoke<T>(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(Of T)(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: IFunctionsClient.Invoke<T>(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: IFunctionsClient.Invoke(Of T)(String, Nullable(Of String), Client.InvokeFunctionOptions)
-- uid: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name: RawInvoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_System_String_System_Nullable_System_String__Supabase_Functions_Client_InvokeFunctionOptions_
-  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String,System.Nullable{System.String},Supabase.Functions.Client.InvokeFunctionOptions)
-  name.vb: RawInvoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
-  fullName: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String, System.Nullable<System.String>, Supabase.Functions.Client.InvokeFunctionOptions)
-  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String, System.Nullable(Of System.String), Supabase.Functions.Client.InvokeFunctionOptions)
-  nameWithType: IFunctionsClient.RawInvoke(String, Nullable<String>, Client.InvokeFunctionOptions)
-  nameWithType.vb: IFunctionsClient.RawInvoke(String, Nullable(Of String), Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Interfaces.IFunctionsClient.Invoke``1(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: Invoke<T>(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_Invoke__1_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.Invoke``1(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: Invoke(Of T)(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Interfaces.IFunctionsClient.Invoke<T>(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.Invoke(Of T)(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: IFunctionsClient.Invoke<T>(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: IFunctionsClient.Invoke(Of T)(String, String, Client.InvokeFunctionOptions)
+- uid: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name: RawInvoke(string, string?, InvokeFunctionOptions?)
+  href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
+  commentId: M:Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
+  name.vb: RawInvoke(String, String, InvokeFunctionOptions)
+  fullName: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(string, string?, Supabase.Functions.Client.InvokeFunctionOptions?)
+  fullName.vb: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke(String, String, Supabase.Functions.Client.InvokeFunctionOptions)
+  nameWithType: IFunctionsClient.RawInvoke(string, string?, Client.InvokeFunctionOptions?)
+  nameWithType.vb: IFunctionsClient.RawInvoke(String, String, Client.InvokeFunctionOptions)
 - uid: Supabase.Functions.Interfaces.IFunctionsClient.RawInvoke*
   name: RawInvoke
   href: api/Supabase.Functions.Interfaces.IFunctionsClient.html#Supabase_Functions_Interfaces_IFunctionsClient_RawInvoke_

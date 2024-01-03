@@ -1,0 +1,62 @@
+{
+  "api/Supabase.Functions.Client.InvokeFunctionOptions.html": {
+    "href": "api/Supabase.Functions.Client.InvokeFunctionOptions.html",
+    "title": "Class Client.InvokeFunctionOptions | functions-csharp",
+    "keywords": "Class Client.InvokeFunctionOptions Namespace Supabase.Functions Assembly Supabase.Functions.dll Options that can be supplied to a function invocation. Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call. public class Client.InvokeFunctionOptions Inheritance object Client.InvokeFunctionOptions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Body Body of the Request [JsonProperty(\"body\")] public Dictionary<string, object> Body { get; set; } Property Value Dictionary<string, object> Headers Headers to be included on the request. public Dictionary<string, string> Headers { get; set; } Property Value Dictionary<string, string>"
+  },
+  "api/Supabase.Functions.Client.html": {
+    "href": "api/Supabase.Functions.Client.html",
+    "title": "Class Client | functions-csharp",
+    "keywords": "Class Client Namespace Supabase.Functions Assembly Supabase.Functions.dll public class Client : IFunctionsClient, IGettableHeaders Inheritance object Client Implements IFunctionsClient IGettableHeaders Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors Client(string) Initializes a functions client public Client(string baseUrl) Parameters baseUrl string Properties GetHeaders Function that can be set to return dynamic headers. Headers specified in the method parameters will ALWAYS take precedence over headers returned by this function. public Func<Dictionary<string, string>>? GetHeaders { get; set; } Property Value Func<Dictionary<string, string>> Methods Invoke(string, string?, InvokeFunctionOptions?) Invokes a function and returns the Text content of the response. public Task<string> Invoke(string functionName, string? token = null, Client.InvokeFunctionOptions? options = null) Parameters functionName string Function Name, will be appended to BaseUrl token string Anon Key. options Client.InvokeFunctionOptions Options Returns Task<string> Invoke<T>(string, string?, InvokeFunctionOptions?) Invokes a function and returns a JSON Deserialized object according to the supplied generic Type T public Task<T?> Invoke<T>(string functionName, string? token = null, Client.InvokeFunctionOptions? options = null) where T : class Parameters functionName string Function Name, will be appended to BaseUrl token string Anon Key. options Client.InvokeFunctionOptions Options Returns Task<T> Type Parameters T RawInvoke(string, string?, InvokeFunctionOptions?) Returns an HttpContent response, allowing for coersion into Streams, Strings, and byte[] public Task<HttpContent> RawInvoke(string functionName, string? token = null, Client.InvokeFunctionOptions? options = null) Parameters functionName string Function Name, will be appended to BaseUrl token string Anon Key. options Client.InvokeFunctionOptions Options Returns Task<HttpContent>"
+  },
+  "api/Supabase.Functions.Exceptions.FailureHint.Reason.html": {
+    "href": "api/Supabase.Functions.Exceptions.FailureHint.Reason.html",
+    "title": "Enum FailureHint.Reason | functions-csharp",
+    "keywords": "Enum FailureHint.Reason Namespace Supabase.Functions.Exceptions Assembly Supabase.Functions.dll A failure reason public enum FailureHint.Reason Fields Internal = 2 An internal error occurred, check your supabase logs. NotAuthorized = 1 Request was not authorized Unknown = 0 An unknown reason"
+  },
+  "api/Supabase.Functions.Exceptions.FailureHint.html": {
+    "href": "api/Supabase.Functions.Exceptions.FailureHint.html",
+    "title": "Class FailureHint | functions-csharp",
+    "keywords": "Class FailureHint Namespace Supabase.Functions.Exceptions Assembly Supabase.Functions.dll A hint as to why a request failed. public static class FailureHint Inheritance object FailureHint Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods DetectReason(FunctionsException) Attempts to detect a reason given an exception. public static FailureHint.Reason DetectReason(FunctionsException ex) Parameters ex FunctionsException Returns FailureHint.Reason"
+  },
+  "api/Supabase.Functions.Exceptions.FunctionsException.html": {
+    "href": "api/Supabase.Functions.Exceptions.FunctionsException.html",
+    "title": "Class FunctionsException | functions-csharp",
+    "keywords": "Class FunctionsException Namespace Supabase.Functions.Exceptions Assembly Supabase.Functions.dll An Exception thrown within Supabase.Functions public class FunctionsException : Exception, ISerializable Inheritance object Exception FunctionsException Implements ISerializable Inherited Members Exception.GetBaseException() Exception.GetObjectData(SerializationInfo, StreamingContext) Exception.GetType() Exception.ToString() Exception.Data Exception.HelpLink Exception.HResult Exception.InnerException Exception.Message Exception.Source Exception.StackTrace Exception.TargetSite Exception.SerializeObjectState object.Equals(object) object.Equals(object, object) object.GetHashCode() object.MemberwiseClone() object.ReferenceEquals(object, object) Constructors FunctionsException(string?) public FunctionsException(string? message) Parameters message string FunctionsException(string?, Exception?) public FunctionsException(string? message, Exception? innerException) Parameters message string innerException Exception Properties Content The Http response content public string? Content { get; } Property Value string Reason A parsed reason for a given failure public FailureHint.Reason Reason { get; } Property Value FailureHint.Reason Response The Http Response public HttpResponseMessage? Response { get; } Property Value HttpResponseMessage StatusCode The Http Status code public int StatusCode { get; } Property Value int Methods AddReason() Attempts to detect a reason for this exception public void AddReason()"
+  },
+  "api/Supabase.Functions.Exceptions.html": {
+    "href": "api/Supabase.Functions.Exceptions.html",
+    "title": "Namespace Supabase.Functions.Exceptions | functions-csharp",
+    "keywords": "Namespace Supabase.Functions.Exceptions Classes FailureHint A hint as to why a request failed. FunctionsException An Exception thrown within Supabase.Functions Enums FailureHint.Reason A failure reason"
+  },
+  "api/Supabase.Functions.Interfaces.IFunctionsClient.html": {
+    "href": "api/Supabase.Functions.Interfaces.IFunctionsClient.html",
+    "title": "Interface IFunctionsClient | functions-csharp",
+    "keywords": "Interface IFunctionsClient Namespace Supabase.Functions.Interfaces Assembly Supabase.Functions.dll Represents a contract for a Supabase Functions Client public interface IFunctionsClient : IGettableHeaders Inherited Members IGettableHeaders.GetHeaders Methods Invoke(string, string?, InvokeFunctionOptions?) Invokes a function given a URL and access token. Returns the string content. Task<string> Invoke(string url, string? token = null, Client.InvokeFunctionOptions? options = null) Parameters url string token string options Client.InvokeFunctionOptions Returns Task<string> Invoke<T>(string, string?, InvokeFunctionOptions?) Invokes a function given a URL and access token. Returns a typed response (should be a JSON.net parsable object) Task<T?> Invoke<T>(string url, string? token = null, Client.InvokeFunctionOptions? options = null) where T : class Parameters url string token string options Client.InvokeFunctionOptions Returns Task<T> Type Parameters T RawInvoke(string, string?, InvokeFunctionOptions?) Invokes a function given a URL and access token. Returns the raw HTTP response. Task<HttpContent> RawInvoke(string url, string? token = null, Client.InvokeFunctionOptions? options = null) Parameters url string token string options Client.InvokeFunctionOptions Returns Task<HttpContent>"
+  },
+  "api/Supabase.Functions.Interfaces.html": {
+    "href": "api/Supabase.Functions.Interfaces.html",
+    "title": "Namespace Supabase.Functions.Interfaces | functions-csharp",
+    "keywords": "Namespace Supabase.Functions.Interfaces Interfaces IFunctionsClient Represents a contract for a Supabase Functions Client"
+  },
+  "api/Supabase.Functions.Responses.BaseResponse.html": {
+    "href": "api/Supabase.Functions.Responses.BaseResponse.html",
+    "title": "Class BaseResponse | functions-csharp",
+    "keywords": "Class BaseResponse Namespace Supabase.Functions.Responses Assembly Supabase.Functions.dll A wrapper class from which all Responses derive. public class BaseResponse Inheritance object BaseResponse Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Content The response content. [JsonIgnore] public string? Content { get; set; } Property Value string ResponseMessage The response message [JsonIgnore] public HttpResponseMessage? ResponseMessage { get; set; } Property Value HttpResponseMessage"
+  },
+  "api/Supabase.Functions.Responses.html": {
+    "href": "api/Supabase.Functions.Responses.html",
+    "title": "Namespace Supabase.Functions.Responses | functions-csharp",
+    "keywords": "Namespace Supabase.Functions.Responses Classes BaseResponse A wrapper class from which all Responses derive."
+  },
+  "api/Supabase.Functions.html": {
+    "href": "api/Supabase.Functions.html",
+    "title": "Namespace Supabase.Functions | functions-csharp",
+    "keywords": "Namespace Supabase.Functions Classes Client Client.InvokeFunctionOptions Options that can be supplied to a function invocation. Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "functions-csharp | functions-csharp",
+    "keywords": "functions-csharp"
+  }
+}
