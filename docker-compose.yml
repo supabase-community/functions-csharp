@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  functions:
+    image: supabase/edge-runtime:v1.30.0
+    ports:
+      - "9000:9000"
+    environment:
+      JWT_SECRET: "37c304f8-51aa-419a-a1af-06154e63707a"
+      VERIFY_JWT: "true"
+    volumes:
+      - ./supabase/functions:/home/deno/functions:Z
+    command:
+      - start
+      - --main-service
+      - /home/deno/functions/main
+    restart: unless-stopped
