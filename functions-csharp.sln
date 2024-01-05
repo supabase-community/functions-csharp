@@ -17,8 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D620
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{11445079-7FD7-4A84-972D-328B82AF1238}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
 		.github\workflows\build-documentation.yaml = .github\workflows\build-documentation.yaml
-		.github\workflows\dotnet-core.yml = .github\workflows\dotnet-core.yml
 		.github\workflows\release.yml = .github\workflows\release.yml
 	EndProjectSection
 EndProject
@@ -40,6 +40,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6201965-1A00-435E-965B-B0D66E74F33B} = {228693BB-A395-4123-93E8-5299FF875615}
+		{11445079-7FD7-4A84-972D-328B82AF1238} = {D6201965-1A00-435E-965B-B0D66E74F33B}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CB8EBAC-5D93-461A-8D2D-B83A69E49B4B}
 	EndGlobalSection
@@ -49,9 +53,5 @@ Global
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 		$0.VersionControlPolicy = $2
 		version = 2.4.0
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D6201965-1A00-435E-965B-B0D66E74F33B} = {228693BB-A395-4123-93E8-5299FF875615}
-		{11445079-7FD7-4A84-972D-328B82AF1238} = {D6201965-1A00-435E-965B-B0D66E74F33B}
 	EndGlobalSection
 EndGlobal

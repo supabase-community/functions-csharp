@@ -13,8 +13,8 @@ namespace FunctionsTests
     [TestClass]
     public class ClientTests
     {
-        Client _client;
-        string _token;
+        private Client _client = null!;
+        private string _token = null!;
 
         [TestInitialize]
         public void Initialize()
