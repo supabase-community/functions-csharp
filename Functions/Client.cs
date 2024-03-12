@@ -19,7 +19,7 @@ namespace Supabase.Functions
     /// <inheritdoc />
     public partial class Client : IFunctionsClient
     {
-        private static readonly HttpClient HttpClient = new HttpClient();
+        private HttpClient _httpClient = new HttpClient();
         private readonly string _baseUrl;
 
         /// <summary>
@@ -126,10 +126,14 @@ namespace Supabase.Functions
             {
                 requestMessage.Headers.TryAddWithoutValidation(kvp.Key, kvp.Value);
             }
-
-            HttpClient.Timeout = options.HttpTimeout;
             
-            var response = await HttpClient.SendAsync(requestMessage);
+            if (_httpClient.Timeout != options.HttpTimeout)
+            {
+                _httpClient = new HttpClient();
+                _httpClient.Timeout = options.HttpTimeout;
+            }
+            
+            var response = await _httpClient.SendAsync(requestMessage);
 
             if (response.IsSuccessStatusCode && !response.Headers.Contains("x-relay-error"))
                 return response;
