@@ -1,9 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Supabase.Functions
 {
-
     public partial class Client
     {
         /// <summary>
@@ -24,6 +24,12 @@ namespace Supabase.Functions
             /// </summary>
             [JsonProperty("body")]
             public Dictionary<string, object> Body { get; set; } = new Dictionary<string, object>();
+
+            /// <summary>
+            /// Timout value for HttpClient Requests, defaults to 100s.
+            /// https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.timeout?view=net-8.0#remarks
+            /// </summary>
+            public TimeSpan HttpTimeout { get; set; } = TimeSpan.FromSeconds(100);
         }
     }
 }

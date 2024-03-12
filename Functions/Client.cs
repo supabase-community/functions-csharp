@@ -127,6 +127,8 @@ namespace Supabase.Functions
                 requestMessage.Headers.TryAddWithoutValidation(kvp.Key, kvp.Value);
             }
 
+            HttpClient.Timeout = options.HttpTimeout;
+            
             var response = await HttpClient.SendAsync(requestMessage);
 
             if (response.IsSuccessStatusCode && !response.Headers.Contains("x-relay-error"))
