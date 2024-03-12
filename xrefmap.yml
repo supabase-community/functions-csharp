@@ -93,6 +93,19 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.InvokeFunctionOptions.Headers
   nameWithType: Client.InvokeFunctionOptions.Headers
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
+  name: HttpTimeout
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_HttpTimeout
+  commentId: P:Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
+  nameWithType: Client.InvokeFunctionOptions.HttpTimeout
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout*
+  name: HttpTimeout
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_HttpTimeout_
+  commentId: Overload:Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
+  nameWithType: Client.InvokeFunctionOptions.HttpTimeout
 - uid: Supabase.Functions.Client.Invoke``1(System.String,System.String,Supabase.Functions.Client.InvokeFunctionOptions)
   name: Invoke<T>(string, string?, InvokeFunctionOptions?)
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_Invoke__1_System_String_System_String_Supabase_Functions_Client_InvokeFunctionOptions_
