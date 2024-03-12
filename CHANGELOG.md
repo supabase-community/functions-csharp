@@ -1,5 +1,9 @@
 ﻿# Changelog
 
+## 1.3.2 - 03-12-2024
+
+- Re: [#5](https://github.com/supabase-community/functions-csharp/issues/5) Add support for specifying Http Timeout on a function call by adding `HttpTimeout` to `InvokeFunctionOptions`
+
 ## 1.3.1 - 06-10-2023
 
 - Updates usage of `Supabase.Core` assembly.
