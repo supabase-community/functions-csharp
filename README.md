@@ -4,8 +4,8 @@
 
 <p align="center">
   <img src="https://github.com/supabase-community/functions-csharp/workflows/Build%20And%20Test/badge.svg"/>
-  <a href="https://www.nuget.org/packages/functions-csharp/">
-    <img src="https://img.shields.io/badge/dynamic/json?color=green&label=Nuget%20Release&query=data[0].version&url=https%3A%2F%2Fazuresearch-usnc.nuget.org%2Fquery%3Fq%3Dpackageid%3Afunctions-csharp"/>
+  <a href="https://www.nuget.org/packages/Supabase.Functions/">
+    <img src="https://img.shields.io/nuget/vpre/Supabase.Functions"/>
   </a>
 </p>
 
