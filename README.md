@@ -11,6 +11,8 @@
 
 ---
 
+## [Notice]: v2.0.0 renames this package from `functions-csharp` to `Supabase.Functions`. The depreciation notice has been set in NuGet. The API remains the same.
+
 C# Client library to interact with Supabase Functions.
 
 ## Package made possible through the efforts of:
