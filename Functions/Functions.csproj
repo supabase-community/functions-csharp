@@ -2,7 +2,9 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PackOnBuild>true</PackOnBuild>
-		<PackageId>functions-csharp</PackageId>
+		<PackageId>Supabase.Functions</PackageId>
+		<RootNamespace>Supabase.Functions</RootNamespace>
+		<AssemblyName>Supabase.Functions</AssemblyName>
 		<Authors>Joseph Schultz &lt;joseph@acupofjose.com&gt;</Authors>
 		<Copyright>MIT</Copyright>
 		<NeutralLanguage>en</NeutralLanguage>
