@@ -37,5 +37,64 @@ namespace Supabase.Functions
             /// </summary>
             public HttpMethod HttpMethod { get; set; } = HttpMethod.Post;
         }
+
+        /// <summary>
+        /// Define the region for requests
+        /// </summary>
+        public class FunctionRegion : IEquatable<FunctionRegion>
+        {
+            private string _region;
+
+            /// <summary>
+            /// Define the region for requests
+            /// </summary>
+            public FunctionRegion(string region)
+            {
+                _region = region;
+            }
+
+            /// <summary>
+            /// Check if the object is identical to the reference passed
+            /// </summary>
+            public override bool Equals(object obj)
+            {
+                return obj is FunctionRegion r && Equals(r);
+            }
+
+            /// <summary>
+            /// Generate Hash code
+            /// </summary>
+            public override int GetHashCode()
+            {
+                return _region.GetHashCode();
+            }
+
+            /// <summary>
+            /// Check if the object is identical to the reference passed
+            /// </summary>
+            public bool Equals(FunctionRegion other)
+            {
+                return _region == other._region;
+            }
+
+            /// <summary>
+            /// Overloading the operator ==
+            /// </summary>
+            public static bool operator ==(FunctionRegion left, FunctionRegion right) =>
+                Equals(left, right);
+
+            /// <summary>
+            /// Overloading the operator !=
+            /// </summary>
+            public static bool operator !=(FunctionRegion left, FunctionRegion right) =>
+                !Equals(left, right);
+
+            public static explicit operator string(FunctionRegion region) => region.ToString();
+
+            public static explicit operator FunctionRegion(string region) =>
+                new FunctionRegion(region);
+
+            public override string? ToString() => _region;
+        }
     }
 }
