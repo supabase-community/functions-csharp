@@ -28,37 +28,38 @@ namespace FunctionsTests
         {
             const string function = "hello";
 
-            var result = await _client.Invoke(function, _token, new InvokeFunctionOptions
-            {
-                Body = new Dictionary<string, object>
+            var result = await _client.Invoke(
+                function,
+                _token,
+                new InvokeFunctionOptions
                 {
-                    {"name", "supabase" }
+                    Body = new Dictionary<string, object> { { "name", "supabase" } },
                 }
-            });
+            );
 
             Assert.IsTrue(result.Contains("supabase"));
 
-
-            var result2 = await _client.Invoke<Dictionary<string, string>>(function, _token, new InvokeFunctionOptions
-            {
-                Body = new Dictionary<string, object>
+            var result2 = await _client.Invoke<Dictionary<string, string>>(
+                function,
+                _token,
+                new InvokeFunctionOptions
                 {
-                    { "name", "functions" }
+                    Body = new Dictionary<string, object> { { "name", "functions" } },
                 }
-            });
+            );
 
             Assert.IsInstanceOfType(result2, typeof(Dictionary<string, string>));
             Assert.IsTrue(result2.ContainsKey("message"));
             Assert.IsTrue(result2["message"].Contains("functions"));
 
-
-            var result3 = await _client.RawInvoke(function, _token, new InvokeFunctionOptions
-            {
-                Body = new Dictionary<string, object>
+            var result3 = await _client.RawInvoke(
+                function,
+                _token,
+                new InvokeFunctionOptions
                 {
-                    { "name", "functions" }
+                    Body = new Dictionary<string, object> { { "name", "functions" } },
                 }
-            });
+            );
 
             var bytes = await result3.ReadAsByteArrayAsync();
 
@@ -71,7 +72,10 @@ namespace FunctionsTests
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(
+                    signingKey,
+                    SecurityAlgorithms.HmacSha256Signature
+                ),
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();

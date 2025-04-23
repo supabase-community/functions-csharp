@@ -1,6 +1,7 @@
 ﻿using System;
-using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace Supabase.Functions
 {
@@ -8,7 +9,7 @@ namespace Supabase.Functions
     {
         /// <summary>
         /// Options that can be supplied to a function invocation.
-        /// 
+        ///
         /// Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call.
         /// </summary>
         public class InvokeFunctionOptions
@@ -16,8 +17,8 @@ namespace Supabase.Functions
             /// <summary>
             /// Headers to be included on the request.
             /// </summary>
-            public Dictionary<string, string> Headers { get; set; } = new Dictionary<string, string>();
-
+            public Dictionary<string, string> Headers { get; set; } =
+                new Dictionary<string, string>();
 
             /// <summary>
             /// Body of the Request
@@ -30,6 +31,11 @@ namespace Supabase.Functions
             /// https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient.timeout?view=net-8.0#remarks
             /// </summary>
             public TimeSpan HttpTimeout { get; set; } = TimeSpan.FromSeconds(100);
+
+            /// <summary>
+            /// Http method of the Request
+            /// </summary>
+            public HttpMethod HttpMethod { get; set; } = HttpMethod.Post;
         }
     }
 }
