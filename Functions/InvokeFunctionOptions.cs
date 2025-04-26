@@ -36,6 +36,11 @@ namespace Supabase.Functions
             /// Http method of the Request
             /// </summary>
             public HttpMethod HttpMethod { get; set; } = HttpMethod.Post;
+
+            /// <summary>
+            /// Region of the request
+            /// </summary>
+            public FunctionRegion FunctionRegion { get; set; } = FunctionRegion.Any;
         }
 
         /// <summary>
@@ -44,6 +49,40 @@ namespace Supabase.Functions
         public class FunctionRegion : IEquatable<FunctionRegion>
         {
             private string _region;
+
+            public static FunctionRegion Any { get; } = new FunctionRegion("any");
+
+            public static FunctionRegion ApNortheast1 { get; } =
+                new FunctionRegion("ap-northeast-1");
+
+            public static FunctionRegion ApNortheast2 { get; } =
+                new FunctionRegion("ap-northeast-2");
+
+            public static FunctionRegion ApSouth1 { get; } = new FunctionRegion("ap-south-1");
+
+            public static FunctionRegion ApSoutheast1 { get; } =
+                new FunctionRegion("ap-southeast-1");
+
+            public static FunctionRegion ApSoutheast2 { get; } =
+                new FunctionRegion("ap-southeast-2");
+
+            public static FunctionRegion CaCentral1 { get; } = new FunctionRegion("ca-central-1");
+
+            public static FunctionRegion EuCentral1 { get; } = new FunctionRegion("eu-central-1");
+
+            public static FunctionRegion EuWest1 { get; } = new FunctionRegion("eu-west-1");
+
+            public static FunctionRegion EuWest2 { get; } = new FunctionRegion("eu-west-2");
+
+            public static FunctionRegion EuWest3 { get; } = new FunctionRegion("eu-west-3");
+
+            public static FunctionRegion SaEast1 { get; } = new FunctionRegion("sa-east-1");
+
+            public static FunctionRegion UsEast1 { get; } = new FunctionRegion("us-east-1");
+
+            public static FunctionRegion UsWest1 { get; } = new FunctionRegion("us-west-1");
+
+            public static FunctionRegion UsWest2 { get; } = new FunctionRegion("us-west-2");
 
             /// <summary>
             /// Define the region for requests
@@ -94,7 +133,7 @@ namespace Supabase.Functions
             public static explicit operator FunctionRegion(string region) =>
                 new FunctionRegion(region);
 
-            public override string? ToString() => _region;
+            public override string ToString() => _region;
         }
     }
 }

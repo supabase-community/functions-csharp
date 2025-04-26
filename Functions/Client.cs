@@ -126,6 +126,11 @@ namespace Supabase.Functions
 
             options.Headers["X-Client-Info"] = Util.GetAssemblyVersion(typeof(Client));
 
+            if (options.FunctionRegion != FunctionRegion.Any)
+            {
+                options.Headers["x-region"] = options.FunctionRegion.ToString();
+            }
+
             var builder = new UriBuilder(url);
             var query = HttpUtility.ParseQueryString(builder.Query);
 
@@ -166,4 +171,3 @@ namespace Supabase.Functions
         }
     }
 }
-

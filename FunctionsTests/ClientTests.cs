@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
@@ -19,8 +20,8 @@ namespace FunctionsTests
         [TestInitialize]
         public void Initialize()
         {
-            _token = GenerateToken("37c304f8-51aa-419a-a1af-06154e63707a");
-            _client = new Client("http://localhost:9000");
+            _token = GenerateToken("super-secret-jwt-token-with-at-least-32-characters-long");
+            _client = new Client("http://localhost:54321/functions/v1");
         }
 
         [TestMethod("Invokes a function.")]
@@ -34,6 +35,7 @@ namespace FunctionsTests
                 new InvokeFunctionOptions
                 {
                     Body = new Dictionary<string, object> { { "name", "supabase" } },
+                    HttpMethod = HttpMethod.Post,
                 }
             );
 
@@ -45,6 +47,7 @@ namespace FunctionsTests
                 new InvokeFunctionOptions
                 {
                     Body = new Dictionary<string, object> { { "name", "functions" } },
+                    HttpMethod = HttpMethod.Post,
                 }
             );
 
@@ -58,12 +61,25 @@ namespace FunctionsTests
                 new InvokeFunctionOptions
                 {
                     Body = new Dictionary<string, object> { { "name", "functions" } },
+                    HttpMethod = HttpMethod.Post,
                 }
             );
 
             var bytes = await result3.ReadAsByteArrayAsync();
 
             Assert.IsInstanceOfType(bytes, typeof(byte[]));
+            
+            var result4 = await _client.Invoke(
+                function,
+                _token,
+                new InvokeFunctionOptions
+                {
+                    Body = [],
+                    HttpMethod = HttpMethod.Get,
+                }
+            );
+
+            Assert.IsTrue(result4.Contains(function));
         }
 
         private static string GenerateToken(string secret)
