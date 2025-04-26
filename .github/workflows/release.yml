@@ -42,4 +42,5 @@ jobs:
         run: dotnet pack ./Functions/Functions.csproj --configuration Release
 
       - name: Publish on version change
-        run: dotnet nuget push "**/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+        run: echo "publish on nuget"
+        # run: dotnet nuget push "**/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
