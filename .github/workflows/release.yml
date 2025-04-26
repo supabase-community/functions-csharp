@@ -1,12 +1,19 @@
 name: Publish NuGet Package
 
 on:
-  push:
-    branches:
-      - release/* # Default release branch
+  workflow_run:
+    workflows: ["release-please"]
+    branches: [master]
+    types:
+      - completed
+
+#  push:
+#    branches:
+#      - release/* # Default release branch
 
 jobs:
   publish:
+    if: ${{ startsWith(github.event.head_commit.message, 'chore(main)') && github.ref == 'refs/heads/main' && github.event_name == 'push' && github.repository_owner == 'supabase' && github.event.workflow_run.conclusion == 'success' }}
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +31,7 @@ jobs:
           check-name: build-and-test
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
-          
+
       - name: Restore dependencies
         run: dotnet restore
 
