@@ -24,8 +24,15 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
-      - name: Initialize Testing Stack
-        run: docker-compose up -d
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest 
+
+      - name: Start supabase
+        run: supabase start
+
+#      - name: Initialize Testing Stack
+#        run: docker-compose up -d
 
       - name: Test
         run: dotnet test --no-restore
