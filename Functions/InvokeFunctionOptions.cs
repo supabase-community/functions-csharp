@@ -184,6 +184,10 @@ namespace Supabase.Functions
             public static explicit operator FunctionRegion(string region) =>
                 new FunctionRegion(region);
 
+            /// <summary>
+            /// Returns a string representation of the FunctionRegion instance.
+            /// </summary>
+            /// <returns>A string that represents the current FunctionRegion instance.</returns>
             public override string ToString() => _region;
         }
     }
