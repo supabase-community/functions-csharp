@@ -1,11 +1,17 @@
 name: Publish NuGet Package
 
 on:
-  workflow_run:
-    workflows: ["release-please"]
-    branches: [master]
+  pull_request:
     types:
-      - completed
+      - closed
+    branches:
+      - "master"
+
+#  workflow_run:
+#    workflows: ["release-please"]
+#    branches: [master]
+#    types:
+#      - completed
 
 #  push:
 #    branches:
@@ -13,7 +19,7 @@ on:
 
 jobs:
   publish:
-    if: ${{ github.repository_owner == 'supabase' && github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.pull_request.merged == true && github.repository_owner == 'diegofesanto' && startsWith(github.event.head_commit.message, 'chore(master)') && github.ref == 'refs/heads/master' && github.event_name == 'push' }}
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
