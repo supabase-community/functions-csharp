@@ -40,7 +40,7 @@ namespace Supabase.Functions
             /// <summary>
             /// Region of the request
             /// </summary>
-            public FunctionRegion FunctionRegion { get; set; } = FunctionRegion.Any;
+            public FunctionRegion? FunctionRegion { get; set; } = null;
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Supabase.Functions
         /// </summary>
         public class FunctionRegion : IEquatable<FunctionRegion>
         {
-            private string _region;
+            private readonly string _region;
 
             /// <summary>
             /// Empty region
@@ -170,7 +170,7 @@ namespace Supabase.Functions
             /// <summary>
             /// Overloading the operator !=
             /// </summary>
-            public static bool operator !=(FunctionRegion left, FunctionRegion right) =>
+            public static bool operator !=(FunctionRegion? left, FunctionRegion? right) =>
                 !Equals(left, right);
 
             /// <summary>
