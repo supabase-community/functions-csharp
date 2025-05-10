@@ -20,7 +20,7 @@ namespace Supabase.Functions
     {
         private HttpClient _httpClient = new HttpClient();
         private readonly string _baseUrl;
-        private FunctionRegion _region;
+        private readonly FunctionRegion _region;
 
         /// <summary>
         /// Function that can be set to return dynamic headers.
@@ -128,14 +128,15 @@ namespace Supabase.Functions
 
             options.Headers["X-Client-Info"] = Util.GetAssemblyVersion(typeof(Client));
 
-            if (options.FunctionRegion != null)
+            var region = options.FunctionRegion;
+            if (region == null)
             {
-                _region = options.FunctionRegion;
+                region = _region;
             }
 
             if (_region != FunctionRegion.Any)
             {
-                options.Headers["x-region"] = _region.ToString();
+                options.Headers["x-region"] = region.ToString();
             }
 
             var builder = new UriBuilder(url);

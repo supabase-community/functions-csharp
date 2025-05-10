@@ -164,7 +164,7 @@ namespace Supabase.Functions
             /// <summary>
             /// Overloading the operator ==
             /// </summary>
-            public static bool operator ==(FunctionRegion left, FunctionRegion right) =>
+            public static bool operator ==(FunctionRegion? left, FunctionRegion? right) =>
                 Equals(left, right);
 
             /// <summary>
