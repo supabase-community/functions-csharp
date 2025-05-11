@@ -134,7 +134,7 @@ namespace Supabase.Functions
                 region = _region;
             }
 
-            if (_region != FunctionRegion.Any)
+            if (region != FunctionRegion.Any)
             {
                 options.Headers["x-region"] = region.ToString();
             }
