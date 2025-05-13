@@ -1,16 +1,15 @@
-﻿using Newtonsoft.Json;
-using Supabase.Core;
-using Supabase.Core.Extensions;
-using Supabase.Functions.Interfaces;
-using Supabase.Functions.Responses;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Newtonsoft.Json;
+using Supabase.Core;
+using Supabase.Core.Extensions;
 using Supabase.Functions.Exceptions;
+using Supabase.Functions.Interfaces;
 
 [assembly: InternalsVisibleTo("FunctionsTests")]
 
@@ -21,10 +20,11 @@ namespace Supabase.Functions
     {
         private HttpClient _httpClient = new HttpClient();
         private readonly string _baseUrl;
+        private readonly FunctionRegion _region;
 
         /// <summary>
         /// Function that can be set to return dynamic headers.
-        /// 
+        ///
         /// Headers specified in the method parameters will ALWAYS take precedence over headers returned by this function.
         /// </summary>
         public Func<Dictionary<string, string>>? GetHeaders { get; set; }
@@ -33,9 +33,11 @@ namespace Supabase.Functions
         /// Initializes a functions client
         /// </summary>
         /// <param name="baseUrl"></param>
-        public Client(string baseUrl)
+        /// <param name="region"></param>
+        public Client(string baseUrl, FunctionRegion? region = null)
         {
             _baseUrl = baseUrl;
+            _region = region ?? FunctionRegion.Any;
         }
 
         /// <summary>
@@ -45,8 +47,11 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<HttpContent> RawInvoke(string functionName, string? token = null,
-            InvokeFunctionOptions? options = null)
+        public async Task<HttpContent> RawInvoke(
+            string functionName,
+            string? token = null,
+            InvokeFunctionOptions? options = null
+        )
         {
             var url = $"{_baseUrl}/{functionName}";
 
@@ -60,8 +65,11 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<string> Invoke(string functionName, string? token = null,
-            InvokeFunctionOptions? options = null)
+        public async Task<string> Invoke(
+            string functionName,
+            string? token = null,
+            InvokeFunctionOptions? options = null
+        )
         {
             var url = $"{_baseUrl}/{functionName}";
             var response = await HandleRequest(url, token, options);
@@ -77,8 +85,12 @@ namespace Supabase.Functions
         /// <param name="token">Anon Key.</param>
         /// <param name="options">Options</param>
         /// <returns></returns>
-        public async Task<T?> Invoke<T>(string functionName, string? token = null,
-            InvokeFunctionOptions? options = null) where T : class
+        public async Task<T?> Invoke<T>(
+            string functionName,
+            string? token = null,
+            InvokeFunctionOptions? options = null
+        )
+            where T : class
         {
             var url = $"{_baseUrl}/{functionName}";
             var response = await HandleRequest(url, token, options);
@@ -96,8 +108,11 @@ namespace Supabase.Functions
         /// <param name="options"></param>
         /// <returns></returns>
         /// <exception cref="FunctionsException"></exception>
-        private async Task<HttpResponseMessage> HandleRequest(string url, string? token = null,
-            InvokeFunctionOptions? options = null)
+        private async Task<HttpResponseMessage> HandleRequest(
+            string url,
+            string? token = null,
+            InvokeFunctionOptions? options = null
+        )
         {
             options ??= new InvokeFunctionOptions();
 
@@ -113,26 +128,40 @@ namespace Supabase.Functions
 
             options.Headers["X-Client-Info"] = Util.GetAssemblyVersion(typeof(Client));
 
+            var region = options.FunctionRegion;
+            if (region == null)
+            {
+                region = _region;
+            }
+
+            if (region != FunctionRegion.Any)
+            {
+                options.Headers["x-region"] = region.ToString();
+            }
+
             var builder = new UriBuilder(url);
             var query = HttpUtility.ParseQueryString(builder.Query);
 
             builder.Query = query.ToString();
 
-            using var requestMessage = new HttpRequestMessage(HttpMethod.Post, builder.Uri);
-            requestMessage.Content = new StringContent(JsonConvert.SerializeObject(options.Body), Encoding.UTF8,
-                "application/json");
+            using var requestMessage = new HttpRequestMessage(options.HttpMethod, builder.Uri);
+            requestMessage.Content = new StringContent(
+                JsonConvert.SerializeObject(options.Body),
+                Encoding.UTF8,
+                "application/json"
+            );
 
             foreach (var kvp in options.Headers)
             {
                 requestMessage.Headers.TryAddWithoutValidation(kvp.Key, kvp.Value);
             }
-            
+
             if (_httpClient.Timeout != options.HttpTimeout)
             {
                 _httpClient = new HttpClient();
                 _httpClient.Timeout = options.HttpTimeout;
             }
-            
+
             var response = await _httpClient.SendAsync(requestMessage);
 
             if (response.IsSuccessStatusCode && !response.Headers.Contains("x-relay-error"))
@@ -143,7 +172,7 @@ namespace Supabase.Functions
             {
                 Content = content,
                 Response = response,
-                StatusCode = (int)response.StatusCode
+                StatusCode = (int)response.StatusCode,
             };
             exception.AddReason();
             throw exception;

@@ -6,12 +6,19 @@ import { serve } from "https://deno.land/std@0.131.0/http/server.ts"
 
 console.log("Hello from Functions!")
 
-serve(async (req) => {
-  const { name } = await req.json()
+serve(async (req: Request) => {
+  let value = req.url.substring(req.url.lastIndexOf("/") + 1)
+  if (req.body != null) {
+    const { name } = await req.json() 
+    value = name
+  }
+  
   const data = {
-    message: `Hello ${name}!`,
+    message: `Hello ${value}!`,
   }
 
+  console.log("response", JSON.stringify(data))
+  
   return new Response(
     JSON.stringify(data),
     { headers: { "Content-Type": "application/json" } },

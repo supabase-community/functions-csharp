@@ -1,13 +1,7 @@
-<p align="center">
-<img width="300" src=".github/supabase-functions.png"/>
-</p>
+# Supabase.Functions
 
-<p align="center">
-  <img src="https://github.com/supabase-community/functions-csharp/workflows/Build%20And%20Test/badge.svg"/>
-  <a href="https://www.nuget.org/packages/Supabase.Functions/">
-    <img src="https://img.shields.io/nuget/vpre/Supabase.Functions"/>
-  </a>
-</p>
+[![Build and Test](https://github.com/supabase-community/functions-csharp/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/supabase-community/functions-csharp/actions/workflows/build-and-test.yml)
+[![NuGet](https://img.shields.io/nuget/vpre/Supabase.Functions)](https://www.nuget.com/packages/Supabase.Functions/)
 
 ---
 
