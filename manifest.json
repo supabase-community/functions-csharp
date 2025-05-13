@@ -12,13 +12,31 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Supabase.Functions.Client.FunctionRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Supabase.Functions.Client.FunctionRegion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Client.FunctionRegion",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Client.FunctionRegion.yml\" sourcestartlinenumber=\"1\">Define the region for requests</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Supabase.Functions.Client.InvokeFunctionOptions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Supabase.Functions.Client.InvokeFunctionOptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Client.InvokeFunctionOptions",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Client.InvokeFunctionOptions.yml\" sourcestartlinenumber=\"1\">Options that can be supplied to a function invocation.</p>\n<p sourcefile=\"api/Supabase.Functions.Client.InvokeFunctionOptions.yml\" sourcestartlinenumber=\"3\">Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +46,11 @@
           "relative_path": "api/Supabase.Functions.Client.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Client",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -38,7 +60,11 @@
           "relative_path": "api/Supabase.Functions.Exceptions.FailureHint.Reason.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Exceptions.FailureHint.Reason",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Exceptions.FailureHint.Reason.yml\" sourcestartlinenumber=\"1\">A failure reason</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +74,11 @@
           "relative_path": "api/Supabase.Functions.Exceptions.FailureHint.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Exceptions.FailureHint",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Exceptions.FailureHint.yml\" sourcestartlinenumber=\"1\">A hint as to why a request failed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +88,11 @@
           "relative_path": "api/Supabase.Functions.Exceptions.FunctionsException.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Exceptions.FunctionsException",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Exceptions.FunctionsException.yml\" sourcestartlinenumber=\"1\">An Exception thrown within <xref href=\"Supabase.Functions\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +102,11 @@
           "relative_path": "api/Supabase.Functions.Exceptions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Exceptions",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -78,7 +116,11 @@
           "relative_path": "api/Supabase.Functions.Interfaces.IFunctionsClient.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Interfaces.IFunctionsClient",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Interfaces.IFunctionsClient.yml\" sourcestartlinenumber=\"1\">Represents a contract for a Supabase Functions Client</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +130,11 @@
           "relative_path": "api/Supabase.Functions.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -98,7 +144,11 @@
           "relative_path": "api/Supabase.Functions.Responses.BaseResponse.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Responses.BaseResponse",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.Responses.BaseResponse.yml\" sourcestartlinenumber=\"1\">A wrapper class from which all Responses derive.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -108,7 +158,11 @@
           "relative_path": "api/Supabase.Functions.Responses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.Responses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -118,17 +172,21 @@
           "relative_path": "api/Supabase.Functions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions",
+      "Summary": null
     },
     {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -147,11 +205,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

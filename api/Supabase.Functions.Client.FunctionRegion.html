@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Client.FunctionRegion | functions-csharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Client.FunctionRegion | functions-csharp ">
+      
+      <meta name="description" content="Define the region for requests">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/supabase-community/functions-csharp/new/master/apiSpec/new?filename=Supabase_Functions_Client_FunctionRegion.md&amp;value=---%0Auid%3A%20Supabase.Functions.Client.FunctionRegion%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="functions-csharp">
+            functions-csharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Supabase.Functions.Client.FunctionRegion">
+
+
+
+  <h1 id="Supabase_Functions_Client_FunctionRegion" data-uid="Supabase.Functions.Client.FunctionRegion" class="text-break">
+Class Client.FunctionRegion  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Supabase.html">Supabase</a>.<a class="xref" href="Supabase.Functions.html">Functions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Supabase.Functions.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Define the region for requests</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Client.FunctionRegion : IEquatable&lt;Client.FunctionRegion&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Client.FunctionRegion</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion__ctor_" data-uid="Supabase.Functions.Client.FunctionRegion.#ctor*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion__ctor_System_String_" data-uid="Supabase.Functions.Client.FunctionRegion.#ctor(System.String)">
+  FunctionRegion(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Define the region for requests</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FunctionRegion(string region)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_Any_" data-uid="Supabase.Functions.Client.FunctionRegion.Any*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_Any" data-uid="Supabase.Functions.Client.FunctionRegion.Any">
+  Any
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Empty region</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion Any { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ApNortheast1_" data-uid="Supabase.Functions.Client.FunctionRegion.ApNortheast1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ApNortheast1" data-uid="Supabase.Functions.Client.FunctionRegion.ApNortheast1">
+  ApNortheast1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the region &quot;ap-northeast-1&quot; for function requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion ApNortheast1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ApNortheast2_" data-uid="Supabase.Functions.Client.FunctionRegion.ApNortheast2*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ApNortheast2" data-uid="Supabase.Functions.Client.FunctionRegion.ApNortheast2">
+  ApNortheast2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;ap-northeast-2&quot; region for function invocation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion ApNortheast2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ApSouth1_" data-uid="Supabase.Functions.Client.FunctionRegion.ApSouth1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ApSouth1" data-uid="Supabase.Functions.Client.FunctionRegion.ApSouth1">
+  ApSouth1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;ap-south-1&quot; region used for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion ApSouth1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ApSoutheast1_" data-uid="Supabase.Functions.Client.FunctionRegion.ApSoutheast1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ApSoutheast1" data-uid="Supabase.Functions.Client.FunctionRegion.ApSoutheast1">
+  ApSoutheast1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the region &quot;ap-southeast-1&quot; for function invocation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion ApSoutheast1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ApSoutheast2_" data-uid="Supabase.Functions.Client.FunctionRegion.ApSoutheast2*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ApSoutheast2" data-uid="Supabase.Functions.Client.FunctionRegion.ApSoutheast2">
+  ApSoutheast2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;ap-southeast-2&quot; region for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion ApSoutheast2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_CaCentral1_" data-uid="Supabase.Functions.Client.FunctionRegion.CaCentral1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_CaCentral1" data-uid="Supabase.Functions.Client.FunctionRegion.CaCentral1">
+  CaCentral1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the Canada (Central) region for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion CaCentral1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_EuCentral1_" data-uid="Supabase.Functions.Client.FunctionRegion.EuCentral1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_EuCentral1" data-uid="Supabase.Functions.Client.FunctionRegion.EuCentral1">
+  EuCentral1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;eu-central-1&quot; region for function invocation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion EuCentral1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_EuWest1_" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_EuWest1" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest1">
+  EuWest1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;eu-west-1&quot; function region for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion EuWest1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_EuWest2_" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest2*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_EuWest2" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest2">
+  EuWest2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;eu-west-2&quot; region for function invocation requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion EuWest2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_EuWest3_" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest3*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_EuWest3" data-uid="Supabase.Functions.Client.FunctionRegion.EuWest3">
+  EuWest3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the AWS region 'eu-west-3'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion EuWest3 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_SaEast1_" data-uid="Supabase.Functions.Client.FunctionRegion.SaEast1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_SaEast1" data-uid="Supabase.Functions.Client.FunctionRegion.SaEast1">
+  SaEast1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the South America (São Paulo) region for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion SaEast1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_UsEast1_" data-uid="Supabase.Functions.Client.FunctionRegion.UsEast1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_UsEast1" data-uid="Supabase.Functions.Client.FunctionRegion.UsEast1">
+  UsEast1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;us-east-1&quot; region for function requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion UsEast1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_UsWest1_" data-uid="Supabase.Functions.Client.FunctionRegion.UsWest1*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_UsWest1" data-uid="Supabase.Functions.Client.FunctionRegion.UsWest1">
+  UsWest1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the us-west-1 region for function requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion UsWest1 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_UsWest2_" data-uid="Supabase.Functions.Client.FunctionRegion.UsWest2*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_UsWest2" data-uid="Supabase.Functions.Client.FunctionRegion.UsWest2">
+  UsWest2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the &quot;us-west-2&quot; region for requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Client.FunctionRegion UsWest2 { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_Equals_" data-uid="Supabase.Functions.Client.FunctionRegion.Equals*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_Equals_Supabase_Functions_Client_FunctionRegion_" data-uid="Supabase.Functions.Client.FunctionRegion.Equals(Supabase.Functions.Client.FunctionRegion)">
+  Equals(FunctionRegion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the object is identical to the reference passed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Client.FunctionRegion other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_Equals_" data-uid="Supabase.Functions.Client.FunctionRegion.Equals*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_Equals_System_Object_" data-uid="Supabase.Functions.Client.FunctionRegion.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if the object is identical to the reference passed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_GetHashCode_" data-uid="Supabase.Functions.Client.FunctionRegion.GetHashCode*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_GetHashCode" data-uid="Supabase.Functions.Client.FunctionRegion.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate Hash code</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_ToString_" data-uid="Supabase.Functions.Client.FunctionRegion.ToString*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_ToString" data-uid="Supabase.Functions.Client.FunctionRegion.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string representation of the FunctionRegion instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current FunctionRegion instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_op_Equality_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Equality*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_op_Equality_Supabase_Functions_Client_FunctionRegion_Supabase_Functions_Client_FunctionRegion_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Equality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)">
+  operator ==(FunctionRegion?, FunctionRegion?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overloading the operator ==</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Client.FunctionRegion? left, Client.FunctionRegion? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_op_Explicit_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Explicit*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_op_Explicit_Supabase_Functions_Client_FunctionRegion__System_String" data-uid="Supabase.Functions.Client.FunctionRegion.op_Explicit(Supabase.Functions.Client.FunctionRegion)~System.String">
+  explicit operator string(FunctionRegion)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overloads the explicit cast operator to convert a FunctionRegion object to a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator string(Client.FunctionRegion region)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_op_Explicit_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Explicit*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_op_Explicit_System_String__Supabase_Functions_Client_FunctionRegion" data-uid="Supabase.Functions.Client.FunctionRegion.op_Explicit(System.String)~Supabase.Functions.Client.FunctionRegion">
+  explicit operator FunctionRegion(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overloads the explicit cast operator to convert a string to a FunctionRegion object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static explicit operator Client.FunctionRegion(string region)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>region</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Supabase_Functions_Client_FunctionRegion_op_Inequality_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Inequality*"></a>
+
+  <h3 id="Supabase_Functions_Client_FunctionRegion_op_Inequality_Supabase_Functions_Client_FunctionRegion_Supabase_Functions_Client_FunctionRegion_" data-uid="Supabase.Functions.Client.FunctionRegion.op_Inequality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)">
+  operator !=(FunctionRegion?, FunctionRegion?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overloading the operator !=</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Client.FunctionRegion? left, Client.FunctionRegion? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="Supabase.Functions.Client.html">Client</a>.<a class="xref" href="Supabase.Functions.Client.FunctionRegion.html">FunctionRegion</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/supabase-community/functions-csharp/blob/master/Functions/InvokeFunctionOptions.cs/#L49" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

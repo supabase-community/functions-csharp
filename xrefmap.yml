@@ -13,15 +13,15 @@ references:
   commentId: T:Supabase.Functions.Client
   fullName: Supabase.Functions.Client
   nameWithType: Client
-- uid: Supabase.Functions.Client.#ctor(System.String)
-  name: Client(string)
-  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_System_String_
-  commentId: M:Supabase.Functions.Client.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Supabase.Functions.Client.Client(string)
-  fullName.vb: Supabase.Functions.Client.New(String)
-  nameWithType: Client.Client(string)
-  nameWithType.vb: Client.New(String)
+- uid: Supabase.Functions.Client.#ctor(System.String,Supabase.Functions.Client.FunctionRegion)
+  name: Client(string, FunctionRegion?)
+  href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_System_String_Supabase_Functions_Client_FunctionRegion_
+  commentId: M:Supabase.Functions.Client.#ctor(System.String,Supabase.Functions.Client.FunctionRegion)
+  name.vb: New(String, FunctionRegion)
+  fullName: Supabase.Functions.Client.Client(string, Supabase.Functions.Client.FunctionRegion?)
+  fullName.vb: Supabase.Functions.Client.New(String, Supabase.Functions.Client.FunctionRegion)
+  nameWithType: Client.Client(string, Client.FunctionRegion?)
+  nameWithType.vb: Client.New(String, Client.FunctionRegion)
 - uid: Supabase.Functions.Client.#ctor*
   name: Client
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client__ctor_
@@ -32,6 +32,340 @@ references:
   fullName.vb: Supabase.Functions.Client.New
   nameWithType: Client.Client
   nameWithType.vb: Client.New
+- uid: Supabase.Functions.Client.FunctionRegion
+  name: Client.FunctionRegion
+  href: api/Supabase.Functions.Client.FunctionRegion.html
+  commentId: T:Supabase.Functions.Client.FunctionRegion
+  fullName: Supabase.Functions.Client.FunctionRegion
+  nameWithType: Client.FunctionRegion
+- uid: Supabase.Functions.Client.FunctionRegion.#ctor(System.String)
+  name: FunctionRegion(string)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion__ctor_System_String_
+  commentId: M:Supabase.Functions.Client.FunctionRegion.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Supabase.Functions.Client.FunctionRegion.FunctionRegion(string)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.New(String)
+  nameWithType: Client.FunctionRegion.FunctionRegion(string)
+  nameWithType.vb: Client.FunctionRegion.New(String)
+- uid: Supabase.Functions.Client.FunctionRegion.#ctor*
+  name: FunctionRegion
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion__ctor_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Supabase.Functions.Client.FunctionRegion.FunctionRegion
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.New
+  nameWithType: Client.FunctionRegion.FunctionRegion
+  nameWithType.vb: Client.FunctionRegion.New
+- uid: Supabase.Functions.Client.FunctionRegion.Any
+  name: Any
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_Any
+  commentId: P:Supabase.Functions.Client.FunctionRegion.Any
+  fullName: Supabase.Functions.Client.FunctionRegion.Any
+  nameWithType: Client.FunctionRegion.Any
+- uid: Supabase.Functions.Client.FunctionRegion.Any*
+  name: Any
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_Any_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.Any
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.Any
+  nameWithType: Client.FunctionRegion.Any
+- uid: Supabase.Functions.Client.FunctionRegion.ApNortheast1
+  name: ApNortheast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApNortheast1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.ApNortheast1
+  fullName: Supabase.Functions.Client.FunctionRegion.ApNortheast1
+  nameWithType: Client.FunctionRegion.ApNortheast1
+- uid: Supabase.Functions.Client.FunctionRegion.ApNortheast1*
+  name: ApNortheast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApNortheast1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ApNortheast1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ApNortheast1
+  nameWithType: Client.FunctionRegion.ApNortheast1
+- uid: Supabase.Functions.Client.FunctionRegion.ApNortheast2
+  name: ApNortheast2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApNortheast2
+  commentId: P:Supabase.Functions.Client.FunctionRegion.ApNortheast2
+  fullName: Supabase.Functions.Client.FunctionRegion.ApNortheast2
+  nameWithType: Client.FunctionRegion.ApNortheast2
+- uid: Supabase.Functions.Client.FunctionRegion.ApNortheast2*
+  name: ApNortheast2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApNortheast2_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ApNortheast2
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ApNortheast2
+  nameWithType: Client.FunctionRegion.ApNortheast2
+- uid: Supabase.Functions.Client.FunctionRegion.ApSouth1
+  name: ApSouth1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSouth1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.ApSouth1
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSouth1
+  nameWithType: Client.FunctionRegion.ApSouth1
+- uid: Supabase.Functions.Client.FunctionRegion.ApSouth1*
+  name: ApSouth1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSouth1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ApSouth1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSouth1
+  nameWithType: Client.FunctionRegion.ApSouth1
+- uid: Supabase.Functions.Client.FunctionRegion.ApSoutheast1
+  name: ApSoutheast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSoutheast1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.ApSoutheast1
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSoutheast1
+  nameWithType: Client.FunctionRegion.ApSoutheast1
+- uid: Supabase.Functions.Client.FunctionRegion.ApSoutheast1*
+  name: ApSoutheast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSoutheast1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ApSoutheast1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSoutheast1
+  nameWithType: Client.FunctionRegion.ApSoutheast1
+- uid: Supabase.Functions.Client.FunctionRegion.ApSoutheast2
+  name: ApSoutheast2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSoutheast2
+  commentId: P:Supabase.Functions.Client.FunctionRegion.ApSoutheast2
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSoutheast2
+  nameWithType: Client.FunctionRegion.ApSoutheast2
+- uid: Supabase.Functions.Client.FunctionRegion.ApSoutheast2*
+  name: ApSoutheast2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ApSoutheast2_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ApSoutheast2
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ApSoutheast2
+  nameWithType: Client.FunctionRegion.ApSoutheast2
+- uid: Supabase.Functions.Client.FunctionRegion.CaCentral1
+  name: CaCentral1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_CaCentral1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.CaCentral1
+  fullName: Supabase.Functions.Client.FunctionRegion.CaCentral1
+  nameWithType: Client.FunctionRegion.CaCentral1
+- uid: Supabase.Functions.Client.FunctionRegion.CaCentral1*
+  name: CaCentral1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_CaCentral1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.CaCentral1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.CaCentral1
+  nameWithType: Client.FunctionRegion.CaCentral1
+- uid: Supabase.Functions.Client.FunctionRegion.Equals(Supabase.Functions.Client.FunctionRegion)
+  name: Equals(FunctionRegion)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_Equals_Supabase_Functions_Client_FunctionRegion_
+  commentId: M:Supabase.Functions.Client.FunctionRegion.Equals(Supabase.Functions.Client.FunctionRegion)
+  fullName: Supabase.Functions.Client.FunctionRegion.Equals(Supabase.Functions.Client.FunctionRegion)
+  nameWithType: Client.FunctionRegion.Equals(Client.FunctionRegion)
+- uid: Supabase.Functions.Client.FunctionRegion.Equals(System.Object)
+  name: Equals(object)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_Equals_System_Object_
+  commentId: M:Supabase.Functions.Client.FunctionRegion.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: Supabase.Functions.Client.FunctionRegion.Equals(object)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.Equals(Object)
+  nameWithType: Client.FunctionRegion.Equals(object)
+  nameWithType.vb: Client.FunctionRegion.Equals(Object)
+- uid: Supabase.Functions.Client.FunctionRegion.Equals*
+  name: Equals
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_Equals_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.Equals
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.Equals
+  nameWithType: Client.FunctionRegion.Equals
+- uid: Supabase.Functions.Client.FunctionRegion.EuCentral1
+  name: EuCentral1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuCentral1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.EuCentral1
+  fullName: Supabase.Functions.Client.FunctionRegion.EuCentral1
+  nameWithType: Client.FunctionRegion.EuCentral1
+- uid: Supabase.Functions.Client.FunctionRegion.EuCentral1*
+  name: EuCentral1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuCentral1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.EuCentral1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.EuCentral1
+  nameWithType: Client.FunctionRegion.EuCentral1
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest1
+  name: EuWest1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.EuWest1
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest1
+  nameWithType: Client.FunctionRegion.EuWest1
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest1*
+  name: EuWest1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.EuWest1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest1
+  nameWithType: Client.FunctionRegion.EuWest1
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest2
+  name: EuWest2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest2
+  commentId: P:Supabase.Functions.Client.FunctionRegion.EuWest2
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest2
+  nameWithType: Client.FunctionRegion.EuWest2
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest2*
+  name: EuWest2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest2_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.EuWest2
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest2
+  nameWithType: Client.FunctionRegion.EuWest2
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest3
+  name: EuWest3
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest3
+  commentId: P:Supabase.Functions.Client.FunctionRegion.EuWest3
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest3
+  nameWithType: Client.FunctionRegion.EuWest3
+- uid: Supabase.Functions.Client.FunctionRegion.EuWest3*
+  name: EuWest3
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_EuWest3_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.EuWest3
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.EuWest3
+  nameWithType: Client.FunctionRegion.EuWest3
+- uid: Supabase.Functions.Client.FunctionRegion.GetHashCode
+  name: GetHashCode()
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_GetHashCode
+  commentId: M:Supabase.Functions.Client.FunctionRegion.GetHashCode
+  fullName: Supabase.Functions.Client.FunctionRegion.GetHashCode()
+  nameWithType: Client.FunctionRegion.GetHashCode()
+- uid: Supabase.Functions.Client.FunctionRegion.GetHashCode*
+  name: GetHashCode
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_GetHashCode_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.GetHashCode
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.GetHashCode
+  nameWithType: Client.FunctionRegion.GetHashCode
+- uid: Supabase.Functions.Client.FunctionRegion.SaEast1
+  name: SaEast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_SaEast1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.SaEast1
+  fullName: Supabase.Functions.Client.FunctionRegion.SaEast1
+  nameWithType: Client.FunctionRegion.SaEast1
+- uid: Supabase.Functions.Client.FunctionRegion.SaEast1*
+  name: SaEast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_SaEast1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.SaEast1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.SaEast1
+  nameWithType: Client.FunctionRegion.SaEast1
+- uid: Supabase.Functions.Client.FunctionRegion.ToString
+  name: ToString()
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ToString
+  commentId: M:Supabase.Functions.Client.FunctionRegion.ToString
+  fullName: Supabase.Functions.Client.FunctionRegion.ToString()
+  nameWithType: Client.FunctionRegion.ToString()
+- uid: Supabase.Functions.Client.FunctionRegion.ToString*
+  name: ToString
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_ToString_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.ToString
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.ToString
+  nameWithType: Client.FunctionRegion.ToString
+- uid: Supabase.Functions.Client.FunctionRegion.UsEast1
+  name: UsEast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsEast1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.UsEast1
+  fullName: Supabase.Functions.Client.FunctionRegion.UsEast1
+  nameWithType: Client.FunctionRegion.UsEast1
+- uid: Supabase.Functions.Client.FunctionRegion.UsEast1*
+  name: UsEast1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsEast1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.UsEast1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.UsEast1
+  nameWithType: Client.FunctionRegion.UsEast1
+- uid: Supabase.Functions.Client.FunctionRegion.UsWest1
+  name: UsWest1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsWest1
+  commentId: P:Supabase.Functions.Client.FunctionRegion.UsWest1
+  fullName: Supabase.Functions.Client.FunctionRegion.UsWest1
+  nameWithType: Client.FunctionRegion.UsWest1
+- uid: Supabase.Functions.Client.FunctionRegion.UsWest1*
+  name: UsWest1
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsWest1_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.UsWest1
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.UsWest1
+  nameWithType: Client.FunctionRegion.UsWest1
+- uid: Supabase.Functions.Client.FunctionRegion.UsWest2
+  name: UsWest2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsWest2
+  commentId: P:Supabase.Functions.Client.FunctionRegion.UsWest2
+  fullName: Supabase.Functions.Client.FunctionRegion.UsWest2
+  nameWithType: Client.FunctionRegion.UsWest2
+- uid: Supabase.Functions.Client.FunctionRegion.UsWest2*
+  name: UsWest2
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_UsWest2_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.UsWest2
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.FunctionRegion.UsWest2
+  nameWithType: Client.FunctionRegion.UsWest2
+- uid: Supabase.Functions.Client.FunctionRegion.op_Equality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)
+  name: operator ==(FunctionRegion?, FunctionRegion?)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Equality_Supabase_Functions_Client_FunctionRegion_Supabase_Functions_Client_FunctionRegion_
+  commentId: M:Supabase.Functions.Client.FunctionRegion.op_Equality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)
+  name.vb: =(FunctionRegion, FunctionRegion)
+  fullName: Supabase.Functions.Client.FunctionRegion.operator ==(Supabase.Functions.Client.FunctionRegion?, Supabase.Functions.Client.FunctionRegion?)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.=(Supabase.Functions.Client.FunctionRegion, Supabase.Functions.Client.FunctionRegion)
+  nameWithType: Client.FunctionRegion.operator ==(Client.FunctionRegion?, Client.FunctionRegion?)
+  nameWithType.vb: Client.FunctionRegion.=(Client.FunctionRegion, Client.FunctionRegion)
+- uid: Supabase.Functions.Client.FunctionRegion.op_Equality*
+  name: operator ==
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Equality_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: Supabase.Functions.Client.FunctionRegion.operator ==
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.=
+  nameWithType: Client.FunctionRegion.operator ==
+  nameWithType.vb: Client.FunctionRegion.=
+- uid: Supabase.Functions.Client.FunctionRegion.op_Explicit(Supabase.Functions.Client.FunctionRegion)~System.String
+  name: explicit operator string(FunctionRegion)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Explicit_Supabase_Functions_Client_FunctionRegion__System_String
+  commentId: M:Supabase.Functions.Client.FunctionRegion.op_Explicit(Supabase.Functions.Client.FunctionRegion)~System.String
+  name.vb: CType(FunctionRegion)
+  fullName: Supabase.Functions.Client.FunctionRegion.explicit operator string(Supabase.Functions.Client.FunctionRegion)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.CType(Supabase.Functions.Client.FunctionRegion)
+  nameWithType: Client.FunctionRegion.explicit operator string(Client.FunctionRegion)
+  nameWithType.vb: Client.FunctionRegion.CType(Client.FunctionRegion)
+- uid: Supabase.Functions.Client.FunctionRegion.op_Explicit(System.String)~Supabase.Functions.Client.FunctionRegion
+  name: explicit operator FunctionRegion(string)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Explicit_System_String__Supabase_Functions_Client_FunctionRegion
+  commentId: M:Supabase.Functions.Client.FunctionRegion.op_Explicit(System.String)~Supabase.Functions.Client.FunctionRegion
+  name.vb: CType(String)
+  fullName: Supabase.Functions.Client.FunctionRegion.explicit operator Supabase.Functions.Client.FunctionRegion(string)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.CType(String)
+  nameWithType: Client.FunctionRegion.explicit operator Client.FunctionRegion(string)
+  nameWithType.vb: Client.FunctionRegion.CType(String)
+- uid: Supabase.Functions.Client.FunctionRegion.op_Explicit*
+  name: explicit operator
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Explicit_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.op_Explicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: Supabase.Functions.Client.FunctionRegion.explicit operator
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.CType
+  nameWithType: Client.FunctionRegion.explicit operator
+  nameWithType.vb: Client.FunctionRegion.CType
+- uid: Supabase.Functions.Client.FunctionRegion.op_Inequality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)
+  name: operator !=(FunctionRegion?, FunctionRegion?)
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Inequality_Supabase_Functions_Client_FunctionRegion_Supabase_Functions_Client_FunctionRegion_
+  commentId: M:Supabase.Functions.Client.FunctionRegion.op_Inequality(Supabase.Functions.Client.FunctionRegion,Supabase.Functions.Client.FunctionRegion)
+  name.vb: <>(FunctionRegion, FunctionRegion)
+  fullName: Supabase.Functions.Client.FunctionRegion.operator !=(Supabase.Functions.Client.FunctionRegion?, Supabase.Functions.Client.FunctionRegion?)
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.<>(Supabase.Functions.Client.FunctionRegion, Supabase.Functions.Client.FunctionRegion)
+  nameWithType: Client.FunctionRegion.operator !=(Client.FunctionRegion?, Client.FunctionRegion?)
+  nameWithType.vb: Client.FunctionRegion.<>(Client.FunctionRegion, Client.FunctionRegion)
+- uid: Supabase.Functions.Client.FunctionRegion.op_Inequality*
+  name: operator !=
+  href: api/Supabase.Functions.Client.FunctionRegion.html#Supabase_Functions_Client_FunctionRegion_op_Inequality_
+  commentId: Overload:Supabase.Functions.Client.FunctionRegion.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: Supabase.Functions.Client.FunctionRegion.operator !=
+  fullName.vb: Supabase.Functions.Client.FunctionRegion.<>
+  nameWithType: Client.FunctionRegion.operator !=
+  nameWithType.vb: Client.FunctionRegion.<>
 - uid: Supabase.Functions.Client.GetHeaders
   name: GetHeaders
   href: api/Supabase.Functions.Client.html#Supabase_Functions_Client_GetHeaders
@@ -80,6 +414,19 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.InvokeFunctionOptions.Body
   nameWithType: Client.InvokeFunctionOptions.Body
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion
+  name: FunctionRegion
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_FunctionRegion
+  commentId: P:Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion
+  nameWithType: Client.InvokeFunctionOptions.FunctionRegion
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion*
+  name: FunctionRegion
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_FunctionRegion_
+  commentId: Overload:Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.FunctionRegion
+  nameWithType: Client.InvokeFunctionOptions.FunctionRegion
 - uid: Supabase.Functions.Client.InvokeFunctionOptions.Headers
   name: Headers
   href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_Headers
@@ -93,6 +440,19 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Client.InvokeFunctionOptions.Headers
   nameWithType: Client.InvokeFunctionOptions.Headers
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod
+  name: HttpMethod
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_HttpMethod
+  commentId: P:Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod
+  nameWithType: Client.InvokeFunctionOptions.HttpMethod
+- uid: Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod*
+  name: HttpMethod
+  href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_HttpMethod_
+  commentId: Overload:Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod
+  isSpec: "True"
+  fullName: Supabase.Functions.Client.InvokeFunctionOptions.HttpMethod
+  nameWithType: Client.InvokeFunctionOptions.HttpMethod
 - uid: Supabase.Functions.Client.InvokeFunctionOptions.HttpTimeout
   name: HttpTimeout
   href: api/Supabase.Functions.Client.InvokeFunctionOptions.html#Supabase_Functions_Client_InvokeFunctionOptions_HttpTimeout
