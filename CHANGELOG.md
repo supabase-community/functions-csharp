@@ -1,4 +1,11 @@
-﻿# Changelog
+# Changelog
+
+## [2.1.0](https://github.com/supabase-community/functions-csharp/compare/v2.0.0...v2.1.0) (2025-05-13)
+
+
+### Miscellaneous Chores
+
+* release 2.1.0 ([6f2d78d](https://github.com/supabase-community/functions-csharp/commit/6f2d78df68e91d3457fa54e3ff28f179edb95ab1))
 
 ## 2.0.0 - 04-21-2024
 
