@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/supabase-community/functions-csharp/compare/v2.1.0...v2.1.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* lower Newtonsoft.Json minimum version to 13.0.2 ([#11](https://github.com/supabase-community/functions-csharp/issues/11)) ([eb188f7](https://github.com/supabase-community/functions-csharp/commit/eb188f745caf4843640ad24955231de85b98f627))
+
 ## [2.1.0](https://github.com/supabase-community/functions-csharp/compare/v2.0.0...v2.1.0) (2025-05-13)
 
 
