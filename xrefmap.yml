@@ -639,6 +639,18 @@ references:
   isSpec: "True"
   fullName: Supabase.Functions.Exceptions.FunctionsException.StatusCode
   nameWithType: FunctionsException.StatusCode
+- uid: Supabase.Functions.FunctionsDiagnostics
+  name: FunctionsDiagnostics
+  href: api/Supabase.Functions.FunctionsDiagnostics.html
+  commentId: T:Supabase.Functions.FunctionsDiagnostics
+  fullName: Supabase.Functions.FunctionsDiagnostics
+  nameWithType: FunctionsDiagnostics
+- uid: Supabase.Functions.FunctionsDiagnostics.SourceName
+  name: SourceName
+  href: api/Supabase.Functions.FunctionsDiagnostics.html#Supabase_Functions_FunctionsDiagnostics_SourceName
+  commentId: F:Supabase.Functions.FunctionsDiagnostics.SourceName
+  fullName: Supabase.Functions.FunctionsDiagnostics.SourceName
+  nameWithType: FunctionsDiagnostics.SourceName
 - uid: Supabase.Functions.Interfaces
   name: Supabase.Functions.Interfaces
   href: api/Supabase.Functions.Interfaces.html

@@ -34,6 +34,11 @@
     "title": "Namespace Supabase.Functions.Exceptions | functions-csharp",
     "summary": "Namespace Supabase.Functions.Exceptions Classes FailureHint A hint as to why a request failed. FunctionsException An Exception thrown within Supabase.Functions Enums FailureHint.Reason A failure reason"
   },
+  "api/Supabase.Functions.FunctionsDiagnostics.html": {
+    "href": "api/Supabase.Functions.FunctionsDiagnostics.html",
+    "title": "Class FunctionsDiagnostics | functions-csharp",
+    "summary": "Class FunctionsDiagnostics Namespace Supabase.Functions Assembly Supabase.Functions.dll Names of the diagnostic sources the Functions client emits to. Pass these when wiring up OpenTelemetry so you don't have to hardcode (case-sensitive) source names: TracerProviderBuilder.AddSource(FunctionsDiagnostics.SourceName) and MeterProviderBuilder.AddMeter(FunctionsDiagnostics.SourceName). public static class FunctionsDiagnostics Inheritance object FunctionsDiagnostics Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields SourceName The name shared by the Functions client's ActivitySource and Meter. public const string SourceName = \"Supabase.Functions\" Field Value string"
+  },
   "api/Supabase.Functions.Interfaces.IFunctionsClient.html": {
     "href": "api/Supabase.Functions.Interfaces.IFunctionsClient.html",
     "title": "Interface IFunctionsClient | functions-csharp",
@@ -57,7 +62,7 @@
   "api/Supabase.Functions.html": {
     "href": "api/Supabase.Functions.html",
     "title": "Namespace Supabase.Functions | functions-csharp",
-    "summary": "Namespace Supabase.Functions Classes Client Client.FunctionRegion Define the region for requests Client.InvokeFunctionOptions Options that can be supplied to a function invocation. Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call."
+    "summary": "Namespace Supabase.Functions Classes Client Client.FunctionRegion Define the region for requests Client.InvokeFunctionOptions Options that can be supplied to a function invocation. Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call. FunctionsDiagnostics Names of the diagnostic sources the Functions client emits to. Pass these when wiring up OpenTelemetry so you don't have to hardcode (case-sensitive) source names: TracerProviderBuilder.AddSource(FunctionsDiagnostics.SourceName) and MeterProviderBuilder.AddMeter(FunctionsDiagnostics.SourceName)."
   },
   "index.html": {
     "href": "index.html",

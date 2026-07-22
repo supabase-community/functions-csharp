@@ -110,6 +110,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Supabase.Functions.FunctionsDiagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Supabase.Functions.FunctionsDiagnostics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Supabase.Functions.FunctionsDiagnostics",
+      "Summary": "<p sourcefile=\"api/Supabase.Functions.FunctionsDiagnostics.yml\" sourcestartlinenumber=\"1\">Names of the diagnostic sources the Functions client emits to. Pass these when wiring up\nOpenTelemetry so you don't have to hardcode (case-sensitive) source names:\n<code>TracerProviderBuilder.AddSource(FunctionsDiagnostics.SourceName)</code> and\n<code>MeterProviderBuilder.AddMeter(FunctionsDiagnostics.SourceName)</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Supabase.Functions.Interfaces.IFunctionsClient.yml",
       "output": {
         ".html": {

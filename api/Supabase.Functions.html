@@ -109,6 +109,14 @@ Classes
 <p>Note: If Headers.Authorization is set, it can be later overriden if a token is supplied in the method call.</p>
 </dd>
     </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Supabase.Functions.FunctionsDiagnostics.html">FunctionsDiagnostics</a></dt>
+      <dd><p>Names of the diagnostic sources the Functions client emits to. Pass these when wiring up
+OpenTelemetry so you don't have to hardcode (case-sensitive) source names:
+<code>TracerProviderBuilder.AddSource(FunctionsDiagnostics.SourceName)</code> and
+<code>MeterProviderBuilder.AddMeter(FunctionsDiagnostics.SourceName)</code>.</p>
+</dd>
+    </dl>
 
 
 </article>
