@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Newtonsoft.Json;
 using Supabase.Core;
+using Supabase.Core.Diagnostics;
 using Supabase.Core.Extensions;
 using Supabase.Functions.Exceptions;
 using Supabase.Functions.Interfaces;
@@ -55,7 +57,7 @@ namespace Supabase.Functions
         {
             var url = $"{_baseUrl}/{functionName}";
 
-            return (await HandleRequest(url, token, options)).Content;
+            return (await HandleRequest(functionName, url, token, options)).Content;
         }
 
         /// <summary>
@@ -72,7 +74,7 @@ namespace Supabase.Functions
         )
         {
             var url = $"{_baseUrl}/{functionName}";
-            var response = await HandleRequest(url, token, options);
+            var response = await HandleRequest(functionName, url, token, options);
 
             return await response.Content.ReadAsStringAsync();
         }
@@ -93,7 +95,7 @@ namespace Supabase.Functions
             where T : class
         {
             var url = $"{_baseUrl}/{functionName}";
-            var response = await HandleRequest(url, token, options);
+            var response = await HandleRequest(functionName, url, token, options);
 
             var content = await response.Content.ReadAsStringAsync();
 
@@ -103,12 +105,14 @@ namespace Supabase.Functions
         /// <summary>
         /// Internal request handling
         /// </summary>
+        /// <param name="functionName"></param>
         /// <param name="url"></param>
         /// <param name="token"></param>
         /// <param name="options"></param>
         /// <returns></returns>
         /// <exception cref="FunctionsException"></exception>
         private async Task<HttpResponseMessage> HandleRequest(
+            string functionName,
             string url,
             string? token = null,
             InvokeFunctionOptions? options = null
@@ -162,20 +166,55 @@ namespace Supabase.Functions
                 _httpClient.Timeout = options.HttpTimeout;
             }
 
-            var response = await _httpClient.SendAsync(requestMessage);
+            using var activity = FunctionsInstrumentation.StartInvokeActivity(options.HttpMethod, builder.Uri, functionName);
+            var startTimestamp = Stopwatch.GetTimestamp();
+            int? statusCode = null;
+            string? errorType = null;
 
-            if (response.IsSuccessStatusCode && !response.Headers.Contains("x-relay-error"))
-                return response;
-
-            var content = await response.Content.ReadAsStringAsync();
-            var exception = new FunctionsException(content)
+            try
             {
-                Content = content,
-                Response = response,
-                StatusCode = (int)response.StatusCode,
-            };
-            exception.AddReason();
-            throw exception;
+                var response = await _httpClient.SendAsync(requestMessage);
+                statusCode = (int)response.StatusCode;
+                var isRelayError = response.Headers.Contains("x-relay-error");
+                activity.SetHttpResponseTags(statusCode.Value);
+
+                if (response.IsSuccessStatusCode && !isRelayError)
+                    return response;
+
+                // A relay error is a failure even when the status code is a success, so it is not
+                // covered by SetHttpResponseTags' status-code check above.
+                if (isRelayError)
+                {
+                    errorType = "x-relay-error";
+                    activity?.SetTag("error.type", errorType);
+                    activity?.SetStatus(ActivityStatusCode.Error);
+                }
+                else
+                {
+                    errorType = statusCode.Value.ToString();
+                }
+
+                var content = await response.Content.ReadAsStringAsync();
+                var exception = new FunctionsException(content)
+                {
+                    Content = content,
+                    Response = response,
+                    StatusCode = (int)response.StatusCode,
+                };
+                exception.AddReason();
+                throw exception;
+            }
+            catch (Exception e) when (!(e is FunctionsException))
+            {
+                // Transport-level failures (no response); Functions surfaces these raw, so tag and rethrow.
+                errorType = e.GetType().FullName;
+                activity.SetFailure(e);
+                throw;
+            }
+            finally
+            {
+                FunctionsInstrumentation.RecordInvoke(options.HttpMethod, builder.Uri, functionName, statusCode, errorType, startTimestamp);
+            }
         }
     }
 }
