@@ -1,102 +1,90 @@
-using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using FluentAssertions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IdentityModel.Tokens.Jwt;
 using Supabase.Functions;
 using static Supabase.Functions.Client;
 
 namespace FunctionsTests
 {
+    /// <summary>
+    /// End-to-end tests that invoke the <c>hello</c> edge function against a running local Supabase
+    /// stack (started with <c>supabase start</c>), exercising the full request/response round trip for
+    /// the string, typed, and raw invocation shapes.
+    /// </summary>
     [TestClass]
+    [TestCategory("E2E")]
     public class ClientTests
     {
-        private Client _client = null!;
-        private string _token = null!;
+        private const string Function = "hello";
+
+        private Client client = null!;
+        private string token = null!;
 
         [TestInitialize]
-        public void Initialize()
+        public void TestInitialize()
         {
-            _token = GenerateToken("super-secret-jwt-token-with-at-least-32-characters-long");
-            _client = new Client("http://localhost:54321/functions/v1");
+            this.token = GenerateToken("super-secret-jwt-token-with-at-least-32-characters-long");
+            this.client = new Client("http://localhost:54321/functions/v1");
         }
 
-        [TestMethod("Invokes a function.")]
-        public async Task Invokes()
+        [TestMethod]
+        public async Task Invoke_ShouldReturnGreetingContainingTheName()
         {
-            const string function = "hello";
+            var result = await this.client.Invoke(Function, this.token, new InvokeFunctionOptions
+            {
+                Body = new Dictionary<string, object> { { "name", "supabase" } },
+                HttpMethod = HttpMethod.Post
+            });
+            result.Should().Contain("supabase");
+        }
 
-            var result = await _client.Invoke(
-                function,
-                _token,
-                new InvokeFunctionOptions
-                {
-                    Body = new Dictionary<string, object> { { "name", "supabase" } },
-                    HttpMethod = HttpMethod.Post,
-                }
-            );
+        [TestMethod]
+        public async Task Invoke_ShouldReturnDeserializedGreeting_GivenTypedInvoke()
+        {
+            var result = await this.client.Invoke<Dictionary<string, string>>(Function, this.token, new InvokeFunctionOptions
+            {
+                Body = new Dictionary<string, object> { { "name", "functions" } },
+                HttpMethod = HttpMethod.Post
+            });
+            result.Should().ContainKey("message").WhoseValue.Should().Contain("functions");
+        }
 
-            Assert.IsTrue(result.Contains("supabase"));
+        [TestMethod]
+        public async Task RawInvoke_ShouldReturnReadableBytes()
+        {
+            var content = await this.client.RawInvoke(Function, this.token, new InvokeFunctionOptions
+            {
+                Body = new Dictionary<string, object> { { "name", "functions" } },
+                HttpMethod = HttpMethod.Post
+            });
+            (await content.ReadAsByteArrayAsync()).Should().NotBeEmpty();
+        }
 
-            var result2 = await _client.Invoke<Dictionary<string, string>>(
-                function,
-                _token,
-                new InvokeFunctionOptions
-                {
-                    Body = new Dictionary<string, object> { { "name", "functions" } },
-                    HttpMethod = HttpMethod.Post,
-                }
-            );
-
-            Assert.IsInstanceOfType(result2, typeof(Dictionary<string, string>));
-            Assert.IsTrue(result2.ContainsKey("message"));
-            Assert.IsTrue(result2["message"].Contains("functions"));
-
-            var result3 = await _client.RawInvoke(
-                function,
-                _token,
-                new InvokeFunctionOptions
-                {
-                    Body = new Dictionary<string, object> { { "name", "functions" } },
-                    HttpMethod = HttpMethod.Post,
-                }
-            );
-
-            var bytes = await result3.ReadAsByteArrayAsync();
-
-            Assert.IsInstanceOfType(bytes, typeof(byte[]));
-            
-            var result4 = await _client.Invoke(
-                function,
-                _token,
-                new InvokeFunctionOptions
-                {
-                    Body = [],
-                    HttpMethod = HttpMethod.Get,
-                }
-            );
-
-            Assert.IsTrue(result4.Contains(function));
+        [TestMethod]
+        public async Task Invoke_ShouldGreetWithFunctionName_GivenGetWithoutBody()
+        {
+            var result = await this.client.Invoke(Function, this.token, new InvokeFunctionOptions
+            {
+                Body = [],
+                HttpMethod = HttpMethod.Get
+            });
+            result.Should().Contain(Function);
         }
 
         private static string GenerateToken(string secret)
         {
             var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
-
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                SigningCredentials = new SigningCredentials(
-                    signingKey,
-                    SecurityAlgorithms.HmacSha256Signature
-                ),
+                SigningCredentials = new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256Signature)
             };
-
             var tokenHandler = new JwtSecurityTokenHandler();
-            var securityToken = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(securityToken);
+            return tokenHandler.WriteToken(tokenHandler.CreateToken(tokenDescriptor));
         }
     }
 }

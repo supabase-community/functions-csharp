@@ -407,5 +407,6 @@ ASALocalRun/
 # Supabase
 .supabase
 .temp
+.branches
 
 launchSettings.json
