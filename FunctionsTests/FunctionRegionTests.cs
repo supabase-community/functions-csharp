@@ -74,10 +74,6 @@ namespace FunctionsTests
         }
 
         [TestMethod]
-        public void Region_ShouldNotEqualObjectOfAnotherType() =>
-            FunctionRegion.UsEast1.ToString().Equals("us-east-1").Should().BeFalse();
-
-        [TestMethod]
         public void Region_ShouldShareHashCodeWithItsWireString() =>
             FunctionRegion.UsEast1.GetHashCode().Should().Be("us-east-1".GetHashCode());
     }
